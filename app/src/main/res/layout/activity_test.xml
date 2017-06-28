@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.jo.jingou.view.FolderTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2015年3月11日 - 为了能够帮助到不会PS软件的朋友,但又想P图的,下面我分享 一下我经常使用最简单最快速的P图方法给你参考!百度经验:jingyan.baidu.com 工具/原料 电脑一台 pho...2015年3月11日 - 为了能够帮助到不会PS软件的朋友,但又想P图的,下面我分享 一下我经常使用最简单最快速的P图方法给你参考!百度经验:jingyan.baidu.com 工具/原料 电脑一台 pho...2015年3月11日 - 为了能够帮助到不会PS软件的朋友,但又想P图的,下面我分享 一下我经常使用最简单最快速的P图方法给你参考!百度经验:jingyan.baidu.com 工具/原料 电脑一台 pho"
+        app:foldline="2" />
+
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="109dp"
+    android:layout_height="165dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingTop="13dp">
+
+
+    <ImageView
+        android:id="@+id/item_mallfragment_productitem_iv"
+        android:layout_width="97dp"
+        android:layout_height="97dp"
+        android:scaleType="fitXY"
+        android:background="@color/gary1"
+        />
+
+    <TextView
+        android:id="@+id/item_mallfragment_productitem_title"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="爱普生L360墨仓爱普生L360墨仓"
+        android:textColor="@color/gary6"
+        android:textSize="12dp" />
+
+
+    <TextView
+        android:id="@+id/item_mallfragment_productitem_price"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:lines="1"
+        android:text="￥999"
+        android:textColor="@color/red2"
+        android:textSize="14dp" />
+
+
+</LinearLayout>

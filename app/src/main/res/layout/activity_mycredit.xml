@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content"
+    style="@style/ActivityStyle1"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/base_topview"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#DCBB98">
+
+
+        <RelativeLayout
+            android:id="@+id/base_topview_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/base_topview_left_img3"
+                android:layout_width="11dp"
+                android:layout_height="19dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back_w" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/base_topview_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/base_topview_center_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="我的积分"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/base_topview_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/base_topview_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="使用说明"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_mine"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="当前积分"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/all_intergal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/activity_mycredit_duihuan"
+            android:layout_width="102dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_corner"
+            android:gravity="center"
+            android:text="兑换分红账号"
+            android:textColor="#CE9A62"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="85dp"
+            android:text="最近30天积分明细"
+            android:textColor="@color/gary5"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>
+
+

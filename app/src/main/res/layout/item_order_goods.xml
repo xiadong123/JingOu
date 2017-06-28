@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="9dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="9dp">
+
+
+    <ImageView
+        android:id="@+id/item_order_goods_pic"
+        android:layout_width="89dp"
+        android:layout_height="89dp"
+        android:scaleType="centerCrop"
+        android:background="@color/gary1"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="9dp"
+        android:paddingLeft="9dp"
+        android:paddingTop="9dp">
+
+        <TextView
+            android:id="@+id/item_order_goods_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Product Series : angelet小天使资格产品系列1"
+            android:textColor="@color/gary6"
+            android:textSize="13dp" />
+
+
+        <TextView
+            android:id="@+id/item_order_goods_para"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_order_goods_title"
+            android:textColor="@color/gary4"
+            android:textSize="10dp" />
+
+
+        <TextView
+            android:id="@+id/item_order_goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="¥ 600.00"
+            android:textColor="@color/red"
+            android:textSize="14dp" />
+
+
+        <TextView
+            android:id="@+id/item_order_goods_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="x1"
+            android:textColor="@color/gary5"
+            android:textSize="13dp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    style="@style/ActivityStyle1"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topview"
+        layout="@layout/baselayout_top_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/gary2"></View>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/divider_1dp_gary2"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:id="@+id/activity_enchashment_layout1"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12.0dip"
+            android:paddingRight="12.0dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:text="提现方式"
+                android:textColor="@color/gary5"
+                android:textSize="14.0dip" />
+
+            <TextView
+                android:id="@+id/activity_enchashment_layout0_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12.0dip"
+                android:gravity="right"
+                android:hint="银行卡"
+                android:textColor="@color/gary4"
+                android:textColorHint="@color/gary6"
+                android:textSize="14.0dip" />
+
+            <ImageView
+                android:layout_width="8.0dip"
+                android:layout_height="13.0dip"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/more" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_enchashment_layout0"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12.0dip"
+            android:paddingRight="12.0dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:text="提现模块"
+                android:textColor="@color/gary5"
+                android:textSize="14.0dip" />
+
+            <TextView
+                android:id="@+id/activity_enchashment_layout0_tv0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12.0dip"
+                android:gravity="right"
+                android:hint="提现分红奖金"
+                android:textColor="@color/gary6"
+                android:textColorHint="@color/gary6"
+                android:textSize="14.0dip" />
+
+            <ImageView
+                android:layout_width="8.0dip"
+                android:layout_height="13.0dip"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/more" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:divider="@drawable/divider_1dp_gary2"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="43.0dip"
+                android:background="@color/garyf0"
+                android:orientation="horizontal"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="12.0dip">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/mine" />
+
+                <TextView
+                    android:id="@+id/activity_enchashment_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/gary6"
+                    android:textSize="14.0dip" />
+
+                <TextView
+                    android:id="@+id/activity_enchashment_changecard_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="right|center_vertical"
+                    android:text="更改银行卡"
+                    android:textColor="@color/red"
+                    android:textSize="14.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="43.0dip"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="12.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="手机号码"
+                    android:textColor="@color/gary5"
+                    android:textSize="14.0dip" />
+
+                <TextView
+                    android:id="@+id/activity_enchashment_tel_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text=""
+                    android:textColor="@color/gary6"
+                    android:textSize="14.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="43.0dip"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="12.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="银行卡号"
+                    android:textColor="@color/gary5"
+                    android:textSize="14.0dip" />
+
+                <TextView
+                    android:id="@+id/activity_enchashment_cardnum_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text=""
+                    android:textColor="@color/gary6"
+                    android:textSize="14.0dip" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="银行卡所属银行"
+                    android:textColor="@color/gary5"
+                    android:textSize="14.0dip" />
+
+                <TextView
+                    android:id="@+id/activity_enchashment_bankname_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:text=""
+                    android:textColor="@color/gary6"
+                    android:textSize="14.0dip" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:background="@color/white"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="12.0dip">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="银行卡开户所在支行"
+                    android:textColor="@color/gary5"
+                    android:textSize="14.0dip" />
+
+                <TextView
+                    android:id="@+id/activity_enchashment_branchname_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="44dp"
+                    android:layout_toRightOf="@+id/tv1"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="@color/gary6"
+                    android:textSize="14.0dip" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="15.0dip"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="12.0dip"
+                android:paddingTop="15.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="提现金额"
+                    android:textColor="@color/gary5"
+                    android:textSize="14.0dip" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0"
+                        android:gravity="center"
+                        android:text="￥"
+                        android:textColor="@color/gary6"
+                        android:textSize="31.0dip" />
+
+                    <EditText
+                        android:id="@+id/activity_enchashment_price_ed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2.0"
+                        android:background="@null"
+                        android:digits="0123456789."
+                        android:inputType="number"
+                        android:hint="请输入需要提现的金额"
+                        android:singleLine="true"
+                        android:textColor="@color/gary6"
+                        android:textColorHint="@color/gary3_1"
+                        android:textSize="20.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="337.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="24.0dip"
+                    android:background="@drawable/fillet_b92c2c"
+                    android:text="提现"
+                    android:textColor="@color/white"
+                    android:textSize="14.0dip" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

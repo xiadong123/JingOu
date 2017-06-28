@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:divider="@drawable/divider_1dp_gary2"
+    android:elevation="1dp"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+
+    <LinearLayout
+        android:id="@+id/item_cartfragment_ll0"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:paddingLeft="7dp"
+        android:paddingRight="12dp">
+
+        <ImageView
+            android:id="@+id/item_cartfragment_ll0_select"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center_vertical"
+            android:padding="5dp"
+            android:src="@drawable/unselected" />
+
+        <TextView
+            android:id="@+id/item_cartfragment_ll0_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="7dp"
+            android:hint="静欧平台"
+            android:textColor="@color/gary5"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_cartfragment_ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider_1dp_gary2"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

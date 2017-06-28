@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#ffffff</color>
+
+
+    <color name="textcolor0">#bd925c</color>
+
+
+    <color name="transparent">#00ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#b92c2c</color>
+    <color name="red2">#db0808</color>
+    <color name="yellow">#FEFCED</color>
+    <color name="orange">#F66C24</color>
+
+    <color name="gary1">#f7f7f7</color>
+    <color name="gary2">#e6e6e6</color>
+    <color name="gary3">#dadada</color>
+    <color name="gary3_0">#cfcfcf</color>
+    <color name="gary3_1">#bababa</color>
+
+    <color name="garyf0">#F0F0F0</color>
+    <color name="gary4">#999999</color>
+    <color name="gary5">#666666</color>
+    <color name="gary6">#333333</color>
+    <color name="gary7">#BFBFBF</color>
+
+    <color name="black40">#66000000</color>
+
+    <color name="text_blue_00">#00A0E9</color>
+
+</resources>

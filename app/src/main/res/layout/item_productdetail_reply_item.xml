@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:background="@android:color/white"
+    android:divider="@drawable/divider_10dp_transparent"
+    android:elevation="1dp"
+    android:orientation="vertical"
+    android:paddingBottom="14dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="14dp"
+    android:showDividers="middle|end">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.jo.jingou.view.CircleImageView
+            android:id="@+id/item_productdetail_reply_remark_head"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/banner_01"
+            app:border_color="@color/gary1" />
+
+        <TextView
+            android:id="@+id/item_productdetail_reply_remark_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="王赫尔"
+            android:textColor="@color/textcolor0"
+            android:textSize="14dp" />
+
+
+        <!--style="@style/roomRatingBar2"-->
+        <RatingBar
+            android:id="@+id/popupwindow_ratedcourse_ratingbar1"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:numStars="5"
+            android:progressTint="#ECB22A"
+            android:rating="4" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_productdetail_reply_remark_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="就是安装了以后，没有找到扫描的，到现在还没有联系惠普售后，到底扫描怎么用，这两天找时间跟售后联系才行。现在基本是已经可以打印跟复印了，复印的时候要不就颜色有点深，要不就没那么清晰！不知道怎么调才好！"
+        android:textColor="@color/gary6"
+        android:textSize="12dp" />
+
+
+    <LinearLayout
+        android:id="@+id/item_productdetail_reply_remark_ivlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_productdetail_reply_remark_iv0"
+            android:layout_width="111dp"
+            android:layout_height="111dp"
+            android:background="@color/gary1"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/item_productdetail_reply_remark_iv1"
+            android:layout_width="111dp"
+            android:layout_height="111dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/gary1"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/item_productdetail_reply_remark_iv2"
+            android:layout_width="111dp"
+            android:layout_height="111dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/gary1"
+            android:scaleType="centerCrop" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/item_productdetail_reply_businessreply_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/snajiao_g" />
+
+
+        <TextView
+            android:id="@+id/item_productdetail_reply_businessreply_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fillet_f7f7f7_4dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="12dp"
+            android:text="商家回复：亲有问题可以联系我们客服哦，期待下次光临~更多新品敬请期待"
+            android:textColor="@color/gary5"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/time" />
+
+        <TextView
+            android:id="@+id/item_productdetail_reply_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="2016-12-01 13:56:38"
+            android:textColor="@color/gary4"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

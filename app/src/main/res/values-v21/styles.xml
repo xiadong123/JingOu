@@ -1,0 +1,59 @@
+<resources>
+
+
+    <style name="ColorTranslucentTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!--状态栏 true是透明 false则为colorPrimaryDark-->
+        <item name="android:windowTranslucentStatus">false</item>
+        <!--虚拟按键栏 true是透明 false则为android:navigationBarColor-->
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <!--<item_text name="colorPrimary">@color/colorPrimary</item_text>-->
+        <!--<item_text name="colorPrimaryDark">@color/colorPrimary</item_text>-->
+        <!--<item_text name="android:statusBarColor">@color/colorPrimary</item_text>-->
+        <!--<item_text name="android:navigationBarColor">@color/colorPrimary</item_text>-->
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+
+    <style name="ColorTranslucentThemeForLauncher" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!--状态栏 true是透明 false则为colorPrimaryDark-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--虚拟按键栏 true是透明 false则为android:navigationBarColor-->
+        <item name="android:windowTranslucentNavigation">true</item>
+
+        <!--<item_text name="colorPrimary">@color/colorPrimary</item_text>-->
+        <!--<item_text name="colorPrimaryDark">@color/colorPrimary</item_text>-->
+
+        <!--<item_text name="android:statusBarColor">@color/colorPrimary</item_text>-->
+        <!--<item_text name="android:navigationBarColor">@color/colorPrimary</item_text>-->
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowBackground">@drawable/bg</item>
+    </style>
+
+
+    <!--<style name="ColorTranslucentThemeForMain" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <!--&lt;!&ndash;状态栏 true是透明 false则为colorPrimaryDark&ndash;&gt;-->
+    <!--<item_text name="android:windowTranslucentStatus">true</item_text>-->
+    <!--&lt;!&ndash;虚拟按键栏 true是透明 false则为android:navigationBarColor&ndash;&gt;-->
+    <!--<item_text name="android:windowTranslucentNavigation">true</item_text>-->
+    <!--&lt;!&ndash;<item_text name="android:windowBackground">@drawable/launch_pic</item_text>&ndash;&gt;-->
+    <!--<item_text name="colorPrimary">@color/colorPrimary</item_text>-->
+    <!--<item_text name="colorPrimaryDark">@color/colorPrimary</item_text>-->
+
+    <!--<item_text name="android:statusBarColor">@color/colorPrimary</item_text>-->
+    <!--<item_text name="android:navigationBarColor">@color/colorPrimary</item_text>-->
+    <!--<item_text name="android:screenOrientation">portrait</item_text>-->
+    <!--</style>-->
+
+
+    <style name="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorPrimary">@color/textcolor0</item>
+        <item name="colorPrimaryDark">@color/textcolor0</item>
+        <item name="colorAccent">@color/textcolor0</item>
+    </style>
+
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:divider="@drawable/divider_10dp_transparent"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="245.0dip"
+            android:divider="@drawable/divider_1dp_gary2"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/popupwindow_button0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="做工瑕疵问题"
+                android:textSize="17.0dip" />
+
+            <TextView
+                android:id="@+id/popupwindow_button1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="商品有气味问题"
+                android:textSize="17.0dip" />
+
+            <TextView
+                android:id="@+id/popupwindow_button2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="商品破损/污渍"
+                android:textSize="17.0dip" />
+
+            <TextView
+                android:id="@+id/popupwindow_button3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="商品与订单不符"
+                android:textSize="17.0dip" />
+
+            <TextView
+                android:id="@+id/popupwindow_button4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="其它"
+                android:textSize="17.0dip" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/popupwindow_button_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="49.0dip"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="17.0dip" />
+    </LinearLayout>
+</RelativeLayout>

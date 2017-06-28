@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/content"
+    style="@style/ActivityStyle1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topview"
+        layout="@layout/baselayout_top_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/gary2"></View>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@color/white"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="店铺名称 "
+                        android:textColor="@color/gary5"/>
+
+                    <EditText
+                        android:id="@+id/shop_name_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/tv1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="请输入您的店铺名称"
+                        android:textColor="@color/gary6"
+                        android:textColorHint="@color/gary3_1"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/gary2"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@color/white"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="联系电话 "
+                        android:textColor="@color/gary5"/>
+
+                    <EditText
+                        android:id="@+id/shop_tel_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/tv2"
+                        android:background="@color/white"
+                        android:digits="0123456789"
+                        android:gravity="center"
+                        android:hint="请输入您的联系电话"
+                        android:inputType="phone"
+                        android:textColor="@color/gary6"
+                        android:textColorHint="@color/gary3_1"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="公司账户 "
+                        android:textColor="@color/gary5"/>
+
+                    <EditText
+                        android:id="@+id/shop_account_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/tv3"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:hint="请输入您的公司账户"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/gary6"
+                        android:textColorHint="@color/gary3_1"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="品牌授权书"
+                        android:textColor="@color/gary5"
+                        android:textSize="14sp"/>
+
+                    <!--<android.support.v7.widget.RecyclerView-->
+                    <!--android:id="@+id/brand_rcy"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="15dp"-->
+                    <!--android:layout_marginTop="19dp"-->
+                    <!--android:background="@color/white"></android.support.v7.widget.RecyclerView>-->
+
+                    <com.jo.jingou.view.imageshowpickerview.ImageShowPickerView
+                        android:id="@+id/brand_ispv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="19dp"
+                        android:minHeight="86dp"
+                        app:add_label="@drawable/add_nine"
+                        app:del_label="@drawable/del_r"
+                        app:is_show_add_pic="true"
+                        app:is_show_anim="true"
+                        app:is_show_del="true"
+                        app:max_num="9"
+                        app:one_line_show_num="4"
+                        app:pic_size="86dp"></com.jo.jingou.view.imageshowpickerview.ImageShowPickerView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="身份验证"
+                        android:textColor="@color/gary5"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/identity_des_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="请上传身份证正面、身份证背面、手持身份证半身照三张照片，并且照片中身份证上的文字要清晰可见。"
+                        android:textColor="@color/gary4"
+                        android:textSize="12sp"/>
+
+                    <!--<android.support.v7.widget.RecyclerView-->
+                    <!--android:id="@+id/identity_rcy"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="86dp"-->
+                    <!--android:layout_marginBottom="15dp"-->
+                    <!--android:layout_marginTop="19dp"></android.support.v7.widget.RecyclerView>-->
+
+                    <com.jo.jingou.view.imageshowpickerview.ImageShowPickerView
+                        android:id="@+id/identity_ispv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="19dp"
+                        android:minHeight="86dp"
+                        app:add_label="@drawable/add_three"
+                        app:del_label="@drawable/del_r"
+                        app:is_show_anim="true"
+                        app:is_show_del="true"
+                        app:max_num="3"
+                        app:one_line_show_num="4"
+                        app:pic_size="86dp"></com.jo.jingou.view.imageshowpickerview.ImageShowPickerView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="相关证件"
+                        android:textColor="@color/gary5"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/certificates_des_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="请上传工商营业执照、组织机构代码证、税务登记证三张证件照片，第一张若传三证合一证后面可不传。"
+                        android:textColor="@color/gary4"
+                        android:textSize="12sp"/>
+
+                    <!--<android.support.v7.widget.RecyclerView-->
+                    <!--android:id="@+id/certificates_rcy"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="86dp"-->
+                    <!--android:layout_marginBottom="15dp"-->
+                    <!--android:layout_marginTop="19dp"></android.support.v7.widget.RecyclerView>-->
+
+                    <com.jo.jingou.view.imageshowpickerview.ImageShowPickerView
+                        android:id="@+id/certificates_ispv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="19dp"
+                        android:minHeight="86dp"
+                        app:add_label="@drawable/add_three"
+                        app:del_label="@drawable/del_r"
+                        app:is_show_anim="true"
+                        app:is_show_del="true"
+                        app:max_num="3"
+                        app:one_line_show_num="4"
+                        app:pic_size="86dp"></com.jo.jingou.view.imageshowpickerview.ImageShowPickerView>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/notice_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="注：所有照片都需要图文清晰，否则或导致申请失败"
+                    android:textColor="@color/gary4"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/bank_card_submit_rl"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/red">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/business_tel_iv"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/call_w"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/bank_card_submit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/business_tel_iv"
+                    android:text="提交"
+                    android:textColor="@color/gary1"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

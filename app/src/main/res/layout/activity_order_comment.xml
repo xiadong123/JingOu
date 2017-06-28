@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content"
+    style="@style/ActivityStyle1"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/topview"
+        layout="@layout/baselayout_top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/divider_10dp_transparent"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider_1dp_gary2"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="9dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="9dp">
+
+
+                    <ImageView
+                        android:id="@+id/item_ordercomment_pic"
+                        android:layout_width="89dp"
+                        android:layout_height="89dp"
+                        android:scaleType="centerCrop" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="9dp"
+                        android:paddingLeft="9dp"
+                        android:paddingTop="9dp">
+
+                        <TextView
+                            android:id="@+id/item_ordercomment_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="3"
+                            android:text="Product Series : angelet小天使资格产品系列1"
+                            android:textColor="@color/gary6"
+                            android:textSize="13dp" />
+
+
+                        <TextView
+                            android:id="@+id/item_ordercomment_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="¥ 600.00"
+                            android:textColor="@color/red"
+                            android:textSize="14dp" />
+
+
+                        <TextView
+                            android:id="@+id/item_ordercomment_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:text="x1"
+                            android:textColor="@color/gary5"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="@drawable/divider_10dp_transparent"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:showDividers="middle">
+
+                    <EditText
+                        android:id="@+id/activity_order_comment_ed0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="请写下对此商品的评价"
+                        android:lines="4"
+                        android:textColor="@color/gary3_1"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:id="@+id/activity_ordr_comment_iv_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:background="@color/white"
+                android:elevation="1dp"
+                android:orientation="vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="描述相符"
+                        android:textColor="@color/gary6"
+                        android:textSize="14dp" />
+
+                    <RatingBar
+                        android:id="@+id/activity_order_comment_rb0"
+                        style="@style/roomRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="37dp"
+                        android:rating="4" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="产品质量"
+                        android:textColor="@color/gary6"
+                        android:textSize="14dp" />
+
+                    <RatingBar
+                        android:id="@+id/activity_order_comment_rb1"
+                        style="@style/roomRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="37dp"
+                        android:rating="4" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="物流速度"
+                        android:textColor="@color/gary6"
+                        android:textSize="14dp" />
+
+                    <RatingBar
+                        android:id="@+id/activity_order_comment_rb2"
+                        style="@style/roomRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="37dp"
+                        android:rating="4" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/white"
+        android:elevation="3dp"
+        android:paddingRight="12dp">
+
+
+        <RelativeLayout
+            android:id="@+id/activity_order_comment_iv3_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/activity_order_comment_iv3"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/addr" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="匿名评价" />
+
+        <TextView
+            android:id="@+id/item_ordercomment_tv1"
+            android:layout_width="97dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="4dp"
+            android:background="@drawable/fillet_b92c2c_1dp_15dp"
+            android:gravity="center"
+            android:text="提交评价"
+            android:textColor="@color/red2"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+</LinearLayout>
+
+

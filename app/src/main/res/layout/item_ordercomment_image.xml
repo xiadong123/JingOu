@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_ordercomment_iv"
+        android:layout_width="86.0dip"
+        android:layout_height="86.0dip"
+        android:layout_marginRight="10.0dip"
+        android:src="@drawable/upload" />
+
+    <ImageView
+        android:id="@+id/item_ordercomment_close"
+        android:layout_width="17.0dip"
+        android:layout_height="17.0dip"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/item_ordercomment_iv"
+        android:src="@drawable/close2"
+        android:visibility="gone" />
+</RelativeLayout>

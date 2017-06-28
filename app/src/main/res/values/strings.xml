@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">利益天下</string>
+
+    <string name="function_not_open">功能尚未开放，程序猿同学拼了老命更新中...</string>
+
+
+    <item name="tag_1" type="id"></item>
+    <item name="tag_2" type="id"></item>
+    <item name="tag_3" type="id"></item>
+    <item name="tag_4" type="id"></item>
+    <item name="tag_5" type="id"></item>
+    <item name="tag_6" type="id"></item>
+
+
+</resources>

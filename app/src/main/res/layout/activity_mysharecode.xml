@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/bg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/share_bg" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bg"
+                android:layout_alignTop="@+id/bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="337.0dip"
+                    android:layout_height="366.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="265.0dip"
+                    android:background="@drawable/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical"
+                        android:padding="20.0dip">
+
+                        <LinearLayout
+                            android:layout_width="193.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1.0"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0.0dip"
+                                android:layout_height="1.0dip"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.0"
+                                android:background="@color/gary2" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_marginRight="5.0dip"
+                                android:text="我的邀请码"
+                                android:textColor="@color/gary6"
+                                android:textSize="16.0dip" />
+
+                            <View
+                                android:layout_width="0.0dip"
+                                android:layout_height="1.0dip"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.0"
+                                android:background="@color/gary2" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/activity_mysharecode_code_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:textColor="@color/red2"
+                            android:textSize="27.0dip" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/submit"
+                                android:layout_width="174.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/fillet_b92c2c"
+                                android:text="分享邀请码"
+                                android:textColor="@color/white"
+                                android:textSize="14.0dip" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical"
+                        android:padding="20.0dip">
+
+                        <ImageView
+                            android:layout_width="120.0dip"
+                            android:layout_height="120.0dip"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/code2wei" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="3.0dip"
+                            android:text="扫一扫下载利益天下APP"
+                            android:textSize="13.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20.0dip"
+                    android:text="规则"
+                    android:textColor="@color/gary6"
+                    android:textSize="16.0dip"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_marginRight="20.0dip"
+                    android:textColor="@color/gary5"
+                    android:textSize="12.0dip"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/base_topview"
+        android:layout_width="fill_parent"
+        android:layout_height="42.0dip">
+
+        <RelativeLayout
+            android:id="@+id/base_topview_left"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:padding="12.0dip">
+
+            <ImageView
+                android:id="@+id/base_topview_left_img3"
+                android:layout_width="11.0dip"
+                android:layout_height="19.0dip"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back_w" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/base_topview_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/base_topview_center_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="我的邀请码"
+                android:textColor="@color/white"
+                android:textSize="17.0dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/base_topview_right"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:padding="12.0dip">
+
+            <TextView
+                android:id="@+id/base_topview_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textColor="@color/white"
+                android:textSize="14.0dip"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

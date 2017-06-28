@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+
+    <TextView
+        android:id="@+id/item_message_enchashment_date0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:text="今天10:00"
+        android:textColor="@color/gary4"
+        android:textSize="10dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fillet_e6e6e6_1dp"
+        android:orientation="vertical"
+        android:paddingBottom="12dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingTop="15dp">
+
+
+        <TextView
+            android:id="@+id/item_message_enchashment_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提现到账成功"
+            android:textColor="@color/gary6"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:id="@+id/item_message_enchashment_date1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="11月1日"
+            android:textColor="@color/gary4"
+            android:textSize="12dp" />
+
+
+        <TextView
+            android:id="@+id/item_message_enchashment_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="￥4000"
+            android:textColor="@color/gary6"
+            android:textSize="31dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/gary2" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提现银行: "
+                android:textColor="@color/gary4"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/item_message_enchashment_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="***银行"
+                android:textColor="@color/gary6"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提现时间: "
+                android:textColor="@color/gary4"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/item_message_enchashment_date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016.10.20 10:00:00"
+                android:textColor="@color/gary6"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="到账时间: "
+                android:textColor="@color/gary4"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/item_message_enchashment_date3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016.10.20 10:00:00"
+                android:textColor="@color/gary6"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

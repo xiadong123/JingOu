@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content"
+    style="@style/ActivityStyle1"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <include
+        android:id="@+id/topview"
+        layout="@layout/baselayout_top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@drawable/divider_1dp_gary2"
+        android:elevation="1dp"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:id="@+id/activity_message_ll0"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="14dip"
+                android:layout_height="16dip"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/message_icon0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="9dp"
+                android:text="订单消息"
+                android:textColor="@color/gary6"
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/activity_message_ll0_number"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/fillet_b92c2c_6dp"
+                android:gravity="center"
+                android:minWidth="12dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="9dp"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/more" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_message_ll1"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="13dip"
+                android:layout_height="12dip"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/message_icon1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="9dp"
+                android:text="提现通知"
+                android:textColor="@color/gary6"
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/activity_message_ll1_number"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/fillet_b92c2c_6dp"
+                android:gravity="center"
+                android:minWidth="12dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="9dp"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/more" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_message_ll2"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="13dip"
+                android:layout_height="14dip"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/message_icon2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="9dp"
+                android:text="系统消息"
+                android:textColor="@color/gary6"
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/activity_message_ll2_number"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/fillet_b92c2c_6dp"
+                android:gravity="center"
+                android:minWidth="12dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="9dp"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/more" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_message_ll3"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="13dip"
+                android:layout_height="12dip"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/message_icon3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="9dp"
+                android:text="奖励通知"
+                android:textColor="@color/gary6"
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/activity_message_ll3_number"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/fillet_b92c2c_6dp"
+                android:gravity="center"
+                android:minWidth="12dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="9dp"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/more" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

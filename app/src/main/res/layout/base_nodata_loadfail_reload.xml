@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/nodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="未查询到相关数据"
+        android:textColor="@color/gary4"
+        android:textSize="16.0dip"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/loadfail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:gravity="center_horizontal"
+            android:src="@drawable/loadfail0" />
+
+        <ImageView
+            android:id="@+id/reload"
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/loadfail1" />
+    </LinearLayout>
+
+
+</RelativeLayout>

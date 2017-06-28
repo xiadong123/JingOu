@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/fillet_b92c2c_4dp" android:state_checked="true" android:textColor="@android:color/white" />
+    <item android:drawable="@drawable/fillet_e6e6e6_1dp_4dp" android:state_checked="false" android:textColor="@color/gary6" />
+</selector>

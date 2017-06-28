@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/divider_left"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingBottom="15dp">
+
+            <ImageView
+                android:id="@+id/item_productlist_productitem_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:background="@color/gary1"
+                />
+
+            <TextView
+                android:id="@+id/item_productlist_productitem_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="20dp"
+                android:text="爱普生L360墨仓爱普生L360墨仓"
+                android:textColor="@color/gary6"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/item_productlist_productitem_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="20dp"
+                android:text="￥999"
+                android:textColor="@color/red2"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider_right"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

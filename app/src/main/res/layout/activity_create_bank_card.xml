@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    style="@style/ActivityStyle1"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topview"
+        layout="@layout/baselayout_top_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/gary2"></View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="姓名"
+                android:textColor="@color/gary5"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/create_bank_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:singleLine="true"
+                android:textColor="@color/gary6"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/gary2"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="银行卡账号"
+                android:textColor="@color/gary5"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/create_bank_username_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:digits="0123456789"
+                android:ellipsize="end"
+                android:inputType="number"
+                android:maxLines="1"
+
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="@color/gary6"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/gary2"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="银行卡所属银行"
+                android:textColor="@color/gary5"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/create_bankname_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:hint="例：中国工商银行"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="@color/gary6"
+                android:textColorHint="@color/gary3_1"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/gary2"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="银行卡开户所在支行"
+                android:textColor="@color/gary5"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/create_branchname_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:hint="例：中国农业银行上海市浦东新区商城路xx支行"
+                android:maxLines="2"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="@color/gary6"
+                android:textColorHint="@color/gary3_1"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/gary2"></View>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/submit_rl"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/fillet_b92c2c">
+
+            <TextView
+                android:id="@+id/submit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="添加"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

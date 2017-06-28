@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content"
+    style="@style/ActivityStyle1"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topview"
+        layout="@layout/baselayout_top_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/divider_10dp_transparent"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="16.0dip"
+            android:paddingLeft="12.0dip"
+            android:paddingRight="12.0dip"
+            android:paddingTop="16.0dip">
+
+            <TextView
+                android:id="@+id/activity_aftersalesdetail_Application"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.0"
+                android:text="退款失败"
+                android:textColor="@color/red2"
+                android:textSize="14.0dip" />
+
+            <LinearLayout
+                android:id="@+id/activity_aftersalesdetail_Money_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款金额："
+                    android:textColor="@color/gary5"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@+id/activity_aftersalesdetail_Money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥1000"
+                    android:textColor="@color/gary6"
+                    android:textSize="12.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/activity_aftersalesdetail_tv1_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款时间："
+                    android:textColor="@color/gary5"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:id="@+id/activity_aftersalesdetail_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016-11-11"
+                    android:textColor="@color/gary6"
+                    android:textSize="12.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="42.0dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="12.0dip"
+                android:text="协商内容"
+                android:textColor="@color/gary6"
+                android:textSize="14.0dip" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1.0dip"
+                android:background="@color/gary2" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12.0dip">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="5.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="售后类型："
+                        android:textColor="@color/gary5"
+                        android:textSize="14.0dip" />
+
+                    <TextView
+                        android:id="@+id/activity_aftersalesdetail_Type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款"
+                        android:textColor="@color/gary6"
+                        android:textSize="14.0dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="5.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收货状态："
+                        android:textColor="@color/gary5"
+                        android:textSize="14.0dip" />
+
+                    <TextView
+                        android:id="@+id/activity_aftersalesdetail_Receiving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已收货"
+                        android:textColor="@color/gary6"
+                        android:textSize="14.0dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="5.0dip">
+
+                    <TextView
+                        android:id="@+id/activity_aftersalesdetail_Reason_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款原因："
+                        android:textColor="@color/gary5"
+                        android:textSize="14.0dip" />
+
+                    <TextView
+                        android:id="@+id/activity_aftersalesdetail_Reason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="七天无理由退货"
+                        android:textColor="@color/gary6"
+                        android:textSize="14.0dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_aftersalesdetail_Money1_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5.0dip"
+                    android:paddingTop="5.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款金额："
+                        android:textColor="@color/gary5"
+                        android:textSize="14.0dip" />
+
+                    <TextView
+                        android:id="@+id/activity_aftersalesdetail_Money1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥1000"
+                        android:textColor="@color/gary6"
+                        android:textSize="14.0dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="22.0dip"
+                    android:paddingTop="5.0dip">
+
+                    <TextView
+                        android:id="@+id/activity_aftersalesdetail_Explain_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="退款说明："
+                        android:textColor="@color/gary5"
+                        android:textSize="14.0dip" />
+
+                    <TextView
+                        android:id="@+id/activity_aftersalesdetail_Explain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="质量有问题"
+                        android:textColor="@color/gary6"
+                        android:textSize="14.0dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3.0dip"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/activity_aftersalesdetail_iv0"
+                        android:layout_width="86.0dip"
+                        android:layout_height="86.0dip"
+                        android:layout_marginRight="10.0dip" />
+
+                    <ImageView
+                        android:id="@+id/activity_aftersalesdetail_iv1"
+                        android:layout_width="86.0dip"
+                        android:layout_height="86.0dip"
+                        android:layout_marginRight="10.0dip" />
+
+                    <ImageView
+                        android:id="@+id/activity_aftersalesdetail_iv2"
+                        android:layout_width="86.0dip"
+                        android:layout_height="86.0dip"
+                        android:layout_marginRight="10.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

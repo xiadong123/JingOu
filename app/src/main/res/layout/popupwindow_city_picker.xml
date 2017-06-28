@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/title_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="取消"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/title_ensure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="完成"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.jo.jingou.view.MyNumberPicker
+                android:id="@+id/popupwindow_city_picker0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></com.jo.jingou.view.MyNumberPicker>
+
+            <com.jo.jingou.view.MyNumberPicker
+                android:id="@+id/popupwindow_city_picker1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></com.jo.jingou.view.MyNumberPicker>
+
+            <com.jo.jingou.view.MyNumberPicker
+                android:id="@+id/popupwindow_city_picker2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></com.jo.jingou.view.MyNumberPicker>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

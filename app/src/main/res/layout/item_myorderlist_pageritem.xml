@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/item_myorderlist_pageritem_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="暂无订单，赶紧去下一个吧！"
+        android:textColor="@color/gary4"
+        android:textSize="16.0dip" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/item_myorderlist_pageritem_swiperefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/item_myorderlist_pageritem_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@drawable/divider_10dp_transparent"
+            android:orientation="vertical" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

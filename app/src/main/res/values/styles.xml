@@ -1,0 +1,85 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!-- 默认主题 -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+
+    <style name="ActivityStyle1">
+        <item name="android:background">@color/gary1</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:keepScreenOn">true</item>
+    </style>
+
+
+    <style name="ActivityStyle_Launch">
+        <item name="android:background">@drawable/bg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:keepScreenOn">true</item>
+    </style>
+
+
+    <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_background</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+        <item name="android:stepSize">1</item>
+    </style>
+
+
+    <style name="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--状态栏 true是透明，false是本来颜色 -->
+        <item name="colorPrimary">@color/textcolor0</item>
+        <item name="colorPrimaryDark">@color/textcolor0</item>
+        <item name="colorAccent">@color/textcolor0</item>
+    </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popup_upanim_y</item>
+        <item name="android:windowExitAnimation">@anim/popup_downanim_y</item>
+    </style>
+
+    <style name="popwin_anim_style_li">
+        <item name="android:windowEnterAnimation">@anim/popup_upanim_y_li</item>
+        <item name="android:windowExitAnimation">@anim/popup_downanim_y_li</item>
+    </style>
+
+    <style name="MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/dialog_basic_data_bg</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="MyAgreeDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowBackground">@drawable/dialog_basic_data_bg1</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content"
+    style="@style/ActivityStyle1"
+    android:divider="@drawable/divider_1dp_gary2"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <include
+        android:id="@+id/topview"
+        layout="@layout/baselayout_top_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/activity_aftersales_layout0"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="16.0dip"
+        android:paddingLeft="12.0dip"
+        android:paddingRight="12.0dip"
+        android:paddingTop="16.0dip">
+
+        <ImageView
+            android:layout_width="49.0dip"
+            android:layout_height="49.0dip"
+            android:src="@drawable/circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="49.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:text="退货退款"
+                android:textColor="@color/gary6"
+                android:textSize="14.0dip" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:text="已收到货，需要退还已收到的货物"
+                android:textColor="@color/gary4"
+                android:textSize="14.0dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="8.0dip"
+            android:layout_height="13.0dip"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/more" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_aftersales_layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="16.0dip"
+        android:paddingLeft="12.0dip"
+        android:paddingRight="12.0dip"
+        android:paddingTop="16.0dip">
+
+        <ImageView
+            android:layout_width="49.0dip"
+            android:layout_height="49.0dip"
+            android:src="@drawable/circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="49.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:text="仅退款"
+                android:textColor="@color/gary6"
+                android:textSize="14.0dip" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:text="未收到货，或与卖家协商同意前提下申请"
+                android:textColor="@color/gary4"
+                android:textSize="14.0dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="8.0dip"
+            android:layout_height="13.0dip"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/more" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_aftersales_layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="16.0dip"
+        android:paddingLeft="12.0dip"
+        android:paddingRight="12.0dip"
+        android:paddingTop="16.0dip">
+
+        <ImageView
+            android:layout_width="49.0dip"
+            android:layout_height="49.0dip"
+            android:src="@drawable/circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="49.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:text="换货"
+                android:textColor="@color/gary6"
+                android:textSize="14.0dip" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:text="已收到货，需要更换已收到的货物"
+                android:textColor="@color/gary4"
+                android:textSize="14.0dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="8.0dip"
+            android:layout_height="13.0dip"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/more" />
+    </LinearLayout>
+
+</LinearLayout>
