@@ -17,6 +17,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.jo.jingou.R;
 import com.jo.jingou.activity.MessageActivity;
+import com.jo.jingou.activity.OrderActivity;
+import com.jo.jingou.activity.PayActivity;
 import com.jo.jingou.activity.ProductDetailActivity;
 import com.jo.jingou.adapter.CommonRefreshAdapter;
 import com.jo.jingou.base.MyBaseFragment;
@@ -309,7 +311,7 @@ public class CartFragment extends MyBaseFragment {
     public void onClick(View v) {
         List<CartModel.ListEntity> listEntities = getListEntities();
         List<CartModel.ListEntity.ModelEntity> modelEntities = getAllSelectModel(listEntities);
-        String txt = "", ProductId = "", productNumber = "", productpara = "";
+        String txt = "", ProductId = "", productNumber = "", productpara = "",ordernum = "";
 
 
         switch (v.getId()) {

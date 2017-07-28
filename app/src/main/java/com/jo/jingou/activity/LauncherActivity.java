@@ -72,50 +72,50 @@ public class LauncherActivity extends MyBaseActivity {
 
     @Override
     public void initListener() {
+//
+//        ImageView imageView1 = new ImageView(this);
+//        imageView1.setImageResource(R.drawable.bg_01);
+//        ImageView imageView2 = new ImageView(this);
+//        imageView2.setImageResource(R.drawable.bg_02);
+//        View view = getLayoutInflater().inflate(R.layout.item_launcher_03, null);
+//        view.findViewById(R.id.item_launch_03_btn1).setOnClickListener(this);
+//        List<View> views = new ArrayList<>();
+//        views.add(imageView1);
+//        views.add(imageView2);
+//        views.add(view);
 
-        ImageView imageView1 = new ImageView(this);
-        imageView1.setImageResource(R.drawable.bg_01);
-        ImageView imageView2 = new ImageView(this);
-        imageView2.setImageResource(R.drawable.bg_02);
-        View view = getLayoutInflater().inflate(R.layout.item_launcher_03, null);
-        view.findViewById(R.id.item_launch_03_btn1).setOnClickListener(this);
-        List<View> views = new ArrayList<>();
-        views.add(imageView1);
-        views.add(imageView2);
-        views.add(view);
 
-
-        viewPager.setAdapter(new ViewPagerAdapter(views));
-
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            public void onPageScrollStateChanged(int state) {
-
-            }
-
-            public void onPageSelected(int position) {
-                switch (position) {
-                    case 0:
-                        circle0.setImageResource(R.drawable.banner_circle_0);
-                        circle1.setImageResource(R.drawable.banner_circle_1);
-                        circle2.setImageResource(R.drawable.banner_circle_1);
-                        break;
-                    case 1:
-                        circle0.setImageResource(R.drawable.banner_circle_1);
-                        circle1.setImageResource(R.drawable.banner_circle_0);
-                        circle2.setImageResource(R.drawable.banner_circle_1);
-                        break;
-                    case 2:
-                        circle0.setImageResource(R.drawable.banner_circle_1);
-                        circle1.setImageResource(R.drawable.banner_circle_1);
-                        circle2.setImageResource(R.drawable.banner_circle_0);
-                        break;
-                }
-            }
-        });
+//        viewPager.setAdapter(new ViewPagerAdapter(views));
+//
+//        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//
+//            }
+//
+//            public void onPageScrollStateChanged(int state) {
+//
+//            }
+//
+//            public void onPageSelected(int position) {
+//                switch (position) {
+//                    case 0:
+//                        circle0.setImageResource(R.drawable.banner_circle_0);
+//                        circle1.setImageResource(R.drawable.banner_circle_1);
+//                        circle2.setImageResource(R.drawable.banner_circle_1);
+//                        break;
+//                    case 1:
+//                        circle0.setImageResource(R.drawable.banner_circle_1);
+//                        circle1.setImageResource(R.drawable.banner_circle_0);
+//                        circle2.setImageResource(R.drawable.banner_circle_1);
+//                        break;
+//                    case 2:
+//                        circle0.setImageResource(R.drawable.banner_circle_1);
+//                        circle1.setImageResource(R.drawable.banner_circle_1);
+//                        circle2.setImageResource(R.drawable.banner_circle_0);
+//                        break;
+//                }
+//            }
+//        });
     }
 
     @Override

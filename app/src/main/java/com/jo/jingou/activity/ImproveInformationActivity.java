@@ -1,5 +1,6 @@
 package com.jo.jingou.activity;
 
+import android.content.Intent;
 import android.text.Html;
 import android.util.Log;
 import android.view.View;
@@ -80,7 +81,7 @@ public class ImproveInformationActivity extends MyBaseActivity {
         submit = findViewAndSetClick(R.id.activity_improveinformation_submit);
         submit2 = findViewAndSetClick(R.id.activity_improveinformation_submit2);
 
-
+        agreement.setOnClickListener(this);
     }
 
     @Override
@@ -91,6 +92,7 @@ public class ImproveInformationActivity extends MyBaseActivity {
     @Override
     public void setupViews() {
         agreement.setText(Html.fromHtml("<font color=\"#999999\">提交表示同意并接受</font><font color=\"#BD925C\">《利益天下分红商城平台用户协议》</font>"));
+
         toBuy = getIntent().getIntExtra("toBuy", 0);
         type = getIntent().getStringExtra(Constant.BYTYPE);
         productid = getIntent().getStringExtra("productid");
@@ -170,6 +172,10 @@ public class ImproveInformationActivity extends MyBaseActivity {
     public void onClick(View view) {
         super.onClick(view);
         switch (view.getId()) {
+            case R.id.activity_improveinformation_agreement:
+                Intent intent1 = new Intent(this, Agreement.class);
+                startActivity(intent1);
+                break;
             case R.id.activity_improveinformation_submit:
             case R.id.activity_improveinformation_submit2:
                 switch (type) {
@@ -339,5 +345,6 @@ public class ImproveInformationActivity extends MyBaseActivity {
                 break;
         }
     }
+
 
 }

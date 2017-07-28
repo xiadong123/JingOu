@@ -38,6 +38,9 @@ public class ApplyinfoModel extends MyBaseModel {
         private int BusinessApplyId;
         private String StoreMobile;
         private String StoreName;
+        private String StoreInviterName;
+        private String StoreInviterPhone;
+        private String StoreCode;
         /**
          * Type : 0
          * UploadId : 8
@@ -85,6 +88,33 @@ public class ApplyinfoModel extends MyBaseModel {
         public void setStoreName(String StoreName) {
             this.StoreName = StoreName;
         }
+
+
+        //后加入
+        public String getStoreInviterName() {
+            return StoreInviterName;
+        }
+
+        public void setStoreInviterName(String StoreInviterName) {
+            this.StoreInviterName = StoreInviterName;
+        }
+
+        public String getStoreInviterPhone() {
+            return StoreInviterPhone;
+        }
+
+        public void setStoreInviterPhone(String StoreInviterPhone) {
+            this.StoreInviterPhone = StoreInviterPhone;
+        }
+
+        public String getStoreCode() {
+            return StoreCode;
+        }
+
+        public void setStoreCode(String StoreCode) {
+            this.StoreCode = StoreCode;
+        }
+
 
         public List<UploadBean> getUpload() {
             return Upload;

@@ -40,6 +40,7 @@ import com.squareup.okhttp.Request;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,7 +75,13 @@ public class MyBusinessActivity extends MyBaseActivity {
     private List<ImageBean> certificatesList = new ArrayList<>();
     private List<Bitmap> certificatesListBitmap = new ArrayList<>();
     private String shopName;
+    private String shopInvite;
     private String shopTel;
+
+    private String inviterName;
+    private String inviterPhone;
+    private String codes;
+
     private String shopAccount;
     private File[] myFile;
     private String[] myPhotoNames;
@@ -93,6 +100,10 @@ public class MyBusinessActivity extends MyBaseActivity {
     private String alipayAccount;
     private String storeName;
     private String editNetUrlStr = "";
+
+    private EditText sInviter_name;
+    private EditText sInviter_phone;
+    private EditText sCode;
 
 
     @Override
@@ -116,6 +127,12 @@ public class MyBusinessActivity extends MyBaseActivity {
         brand_ispv = (ImageShowPickerView) findViewById(R.id.brand_ispv);
         identity_ispv = (ImageShowPickerView) findViewById(R.id.identity_ispv);
         certificates_ispv = (ImageShowPickerView) findViewById(R.id.certificates_ispv);
+
+
+        sInviter_name = (EditText) findViewById(R.id.inviter_name);
+        sInviter_phone = (EditText) findViewById(R.id.inviter_phone);
+        sCode = (EditText) findViewById(R.id.code);
+
     }
 
     @Override
@@ -184,7 +201,7 @@ public class MyBusinessActivity extends MyBaseActivity {
         AgreementDialogUtil.showDialog(this, new AgreementDialogUtil.DialogConfirm() {
             @Override
             public void confirm() {
-
+//                InputStream is = getResources().getAssets().open("a.txt")
             }
         });
     }
@@ -653,6 +670,21 @@ public class MyBusinessActivity extends MyBaseActivity {
             showToast("请填写店铺名称");
             return false;
         }
+        inviterName = sInviter_name.getText().toString().trim();
+        if (!MyUtils.hasValue(inviterName)) {
+            showToast("请填写推荐人姓名");
+            return false;
+        }
+        inviterPhone = sInviter_phone.getText().toString().trim();
+        if (!MyUtils.hasValue(inviterPhone)) {
+            showToast("请填写推荐人电话");
+            return false;
+        }
+        codes = sCode.getText().toString().trim();
+        if (!MyUtils.hasValue(codes)) {
+            showToast("请填写推荐人邀请码");
+            return false;
+        }
         shopTel = sShop_tel_et.getText().toString().trim();
         if (!MyUtils.hasValue(shopTel)) {
             showToast("请填写联系电话");
@@ -786,13 +818,25 @@ public class MyBusinessActivity extends MyBaseActivity {
         sShop_tel_et.setText(model.getStoreMobile());
         sShop_account_et.setText(model.getAlipayAccount());
 
+        sInviter_name.setText(model.getStoreInviterName());
+        sInviter_phone.setText(model.getStoreInviterPhone());
+        sCode.setText(model.getStoreCode());
+
         sShop_name_et.setEnabled(false);
         sShop_tel_et.setEnabled(false);
         sShop_account_et.setEnabled(false);
 
+        sInviter_name.setEnabled(false);
+        sInviter_phone.setEnabled(false);
+        sCode.setEnabled(false);
+
         sShop_name_et.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
         sShop_tel_et.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
         sShop_account_et.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
+
+        sInviter_name.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
+        sInviter_phone.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
+        sCode.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
     }
 
     @Override

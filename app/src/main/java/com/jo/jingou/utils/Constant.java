@@ -31,11 +31,16 @@ public final class Constant {
     public final static int LOGININVAILD = 40841;
 
     //服务器地址
-    //public final static String SERVER_HOST = "http://www.lytx999.com";
+    //静欧公司正式网址
+    public final static String SERVER_HOST = "http://www.lytx999.com";
+
+    //原外包测试网址
     //public final static String SERVER_HOST = "http://jingou.idea-source.net";
     //public final static String SERVER_HOST = "http://woerde.idea-source.net";
     //public final static String SERVER_HOST = "http://192.168.0.66:8037";
-    public final static String SERVER_HOST = "http://120.27.240.229:8022";
+
+    //阿里云网址
+//    public final static String SERVER_HOST = "http://120.27.240.229:8022";
 
     //获取请求接口权限token
     public final static int TOKEN_ID = 1001;
@@ -126,6 +131,7 @@ public final class Constant {
     //支付宝支付数据获取
     public final static int ALIPAY_ID = 1012;
     public final static String ALIPAY = SERVER_HOST + "/api/app/participation/Signature?token=";
+
 
     //取消订单
     public final static int ORDERTYPE_ID = 1013;
@@ -333,7 +339,7 @@ public final class Constant {
     //测试支付接口 /api/app/participation/AddCeshiAlipay
     public final static int ADDCESHIALIPAY_ID = 2000;
     public final static String ADDCESHIALIPAY = SERVER_HOST +
-            "/api/app/participation/AddCeshiAlipay?token=";
+            "/api/app/participation/WeiXinPay?token=";
 
 
 }

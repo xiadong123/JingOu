@@ -18,7 +18,7 @@ import caesar.feng.framework.utils.Utility;
 /**
  * Created by dfyu on 2017/3/17.
  */
-public class TextViewAd extends TextView {
+public class TextViewAd extends android.support.v7.widget.AppCompatTextView {
     private int mDuration; //文字从出现到显示消失的时间
     private int mInterval; //文字停留在中间的时长切换的间隔
     private List<ADEnity> mTexts; //显示文字的数据源

@@ -25,6 +25,7 @@ import caesar.feng.framework.net.OkHttpClientManager;
 
 /**
  * Created by dfyu on 2016/12/7.
+ *
  */
 public class PayActivity extends MyBaseActivity {
 
@@ -119,7 +120,7 @@ public class PayActivity extends MyBaseActivity {
     @Override
     public void findViews() {
         zhifubao_layout = findViewAndSetClick(R.id.activity_pay_zhifubao_layout);
-        //weixin_layout = findViewAndSetClick(R.id.activity_pay_weixin_layout);
+        weixin_layout = findViewAndSetClick(R.id.activity_pay_weixin_layout);
         zhifubao_check = (ImageView) findViewById(R.id.activity_pay_zhifubao_check);
         weixin_check = (ImageView) findViewById(R.id.activity_pay_weixin_check);
 
@@ -170,11 +171,11 @@ public class PayActivity extends MyBaseActivity {
                 } else {
                     final IWXAPI msgApi = WXAPIFactory.createWXAPI(PayActivity.this, null);
                     // 将该app注册到微信
-                    msgApi.registerApp("wx18fb03b1f5d04df9");
+                    msgApi.registerApp("wxbd3e6bba8efbae73");
                 }
 
-//                showLoadingDialog();
-//                utilNetwork.getAddCeshiAlipayModel(new OkHttpClientManager.Param[]{new OkHttpClientManager.Param("out_trade_no", ordernum)});
+                showLoadingDialog();
+                utilNetwork.getAddCeshiAlipayModel(new OkHttpClientManager.Param[]{new OkHttpClientManager.Param("out_trade_no", ordernum)});
                 break;
         }
     }

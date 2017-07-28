@@ -150,11 +150,9 @@ public class Util_PopupWindow {
 
 
     //分享Pop1
-    public static <T extends MyBaseActivity> PopupWindow setCommonPopupWindow_Share1(final T t,
-                                                                                     final String
-                                                                                             url,
-                                                                                     String text) {
+    public static <T extends MyBaseActivity> PopupWindow setCommonPopupWindow_Share1(final T t, final String url, String text) {
         View wx, wxc, sina, qq, cancel;
+
         final SetPopModel setPopModel = Util_PopupWindow.setBasePopupWindow(t, R.layout
                 .popupwindow_share, null, null);
         View contentView = setPopModel.getContentView();

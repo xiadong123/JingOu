@@ -216,6 +216,7 @@
             android:configChanges="keyboardHidden|navigation|orientation"
             android:exported="false"
             android:screenOrientation="behind" />
+        <activity android:name=".activity.Agreement" />
         <activity
             android:name="com.alipay.sdk.auth.AuthActivity"
             android:configChanges="keyboardHidden|navigation|orientation"
@@ -223,16 +224,16 @@
             android:screenOrientation="behind" />
         <activity
             android:name=".wxapi.WXEntryActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <!-- <activity -->
-        <!-- android:name="com.jo.jingou.wxapi.WXPayEntryActivity" -->
-        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
-        <!-- android:exported="true" -->
-        <!-- android:screenOrientation="portrait" -->
-        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" /> -->
+            android:screenOrientation="portrait" />
+         <!--<activity-->
+         <!--android:name="com.jo.jingou.wxapi.WXPayEntryActivity"-->
+         <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
+         <!--android:exported="true"-->
+         <!--android:screenOrientation="portrait"-->
+         <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
         <activity
             android:name="com.umeng.qq.tencent.AuthActivity"
             android:launchMode="singleTask"
@@ -251,19 +252,26 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity
-            android:name="com.umeng.socialize.editorpage.ShareActivity"
-            android:excludeFromRecents="true"
-            android:theme="@style/Theme.UMDefault" />
+        <!--<activity-->
+            <!--android:name="com.umeng.socialize.editorpage.ShareActivity"-->
+            <!--android:excludeFromRecents="true"-->
+            <!--android:theme="@style/Theme.UMDefault" />-->
 
 
         <!--  友盟分享及推送配置  -->
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="5938e392310c930c5200021c" />
+            android:value="5978358d8f4a9d7c920017fd" />
         <meta-data
             android:name="UMENG_MESSAGE_SECRET"
-            android:value="2def4f95fb63c0510c1aa78259198410"></meta-data>
+            android:value="2def4f95fb63c0510c1aa78259198410">
+
+        </meta-data>
+
+        <!--&lt;!&ndash;设置动态渠道变量&ndash;&gt;-->
+        <!--<meta-data-->
+            <!--android:name="UMENG_CHANNEL"-->
+            <!--android:value="${UMENG_CHANNEL_VALUE}" />-->
 
 
         <!-- 我的钱包 奖励详情  -Li -->
@@ -275,19 +283,28 @@
             android:name=".activity.TransactionRecordActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ColorTranslucentTheme" />
-        <activity android:name=".activity.BankCardActivity"></activity>
+        <activity android:name=".activity.BankCardActivity">
+
+        </activity>
         <activity
             android:name=".activity.CreateBankCardActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/ColorTranslucentTheme"></activity>
+            android:theme="@style/ColorTranslucentTheme">
+
+        </activity>
         <activity
             android:name=".activity.MyBusinessActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/ColorTranslucentTheme"></activity>
+            android:theme="@style/ColorTranslucentTheme">
+
+        </activity>
         <activity
             android:name=".activity.WalletDesActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/ColorTranslucentTheme"></activity>
+            android:theme="@style/ColorTranslucentTheme">
+
+        </activity>
+
 
     </application>
 

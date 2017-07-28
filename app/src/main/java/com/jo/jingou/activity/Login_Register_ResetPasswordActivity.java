@@ -84,6 +84,7 @@ public class Login_Register_ResetPasswordActivity extends MyBaseActivity {
         submit = findViewAndSetClick(R.id.activity_LoginRegisterResterPassword_submit);
         forgetpassword = findViewAndSetClick(R.id.activity_LoginRegisterResterPassword_forgetpassword);
         agreement = findViewAndSetClick(R.id.activity_LoginRegisterResterPassword_agreement);
+        TextView agreement1 = (TextView) findViewById(R.id.activity_LoginRegisterResterPassword_agreement);
     }
 
     @Override
@@ -162,6 +163,7 @@ public class Login_Register_ResetPasswordActivity extends MyBaseActivity {
 
             case R.id.activity_LoginRegisterResterPassword_sendcode:
                 network_sendcode();
+
                 break;
         }
     }
@@ -466,5 +468,7 @@ public class Login_Register_ResetPasswordActivity extends MyBaseActivity {
         forgetpassword.setVisibility(forgetpasswordVis);
         agreement.setVisibility(agreementVis);
         agreement.setText(Html.fromHtml("<font color=\"#999999\">提交表示同意并接受</font><font color=\"#BD925C\">《利益天下分红商城平台用户协议》</font>"));
+
     }
+
 }

@@ -24,6 +24,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.util.Util;
 import com.jo.jingou.MyApplication;
 import com.jo.jingou.R;
+import com.jo.jingou.activity.Agreement;
 import com.jo.jingou.activity.Login_Register_ResetPasswordActivity;
 import com.jo.jingou.model.loader.MessageLoader;
 import com.jo.jingou.utils.Constant;
@@ -148,6 +149,7 @@ public abstract class MyBaseActivity extends BaseActivity implements MessageLoad
         rightview.setVisibility(View.VISIBLE);
         leftview.setOnClickListener(this);
         rightview.setOnClickListener(this);
+
     }
 
     protected void setTopview2(String title) {
@@ -338,13 +340,13 @@ public abstract class MyBaseActivity extends BaseActivity implements MessageLoad
                         onCompleteImageCallBack(image_path);
                     }
                 } else if (imageSwitch == 2) { // 接收相册回调
-//                    if (data != null) {
-//                        String currentFilePath = MyUtils.getPath(MyBaseActivity.this, data.getData()) + "";
-//                        if (!currentFilePath.isEmpty())
-//                            getCropImagePhoto(Uri.fromFile(new File(currentFilePath)), Constant.IMGCALLBACKCUT, "头像");
-//                        else
-//                            showToast("未在存储卡中找到这个文件");
-//                    }
+                    if (data != null) {
+                        String currentFilePath = MyUtils.getPath(MyBaseActivity.this, data.getData()) + "";
+                        if (!currentFilePath.isEmpty())
+                            getCropImagePhoto(Uri.fromFile(new File(currentFilePath)), Constant.IMGCALLBACKCUT, "头像");
+                        else
+                            showToast("未在存储卡中找到这个文件");
+                    }
 
                     if (data != null) {
                         Log.i("TAG", "data.setData() =========" + data.getData());
@@ -516,6 +518,14 @@ public abstract class MyBaseActivity extends BaseActivity implements MessageLoad
     @Override
     public void onClick(View view) {
 
+        switch (view.getId()){
+            case R.id.activity_LoginRegisterResterPassword_agreement:
+                Intent intent = new Intent(this, Agreement.class);
+                startActivity(intent);
+                break;
+
+
+        }
     }
 
     public <T extends MyBaseModel> void onNetworkCallBack(int status_code, int network_code, T model) {

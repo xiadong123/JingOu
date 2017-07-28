@@ -53,6 +53,8 @@ public class CitySelectAdapter extends BaseAdapter {
             myViewHolder = (MyViewHolder) convertView.getTag();
         }
 
+
+
         Area2Model.AreaListEntity cityBean = citydata.get(position);
         myViewHolder.sCatalog.setText(cityBean.getFirst_letter());
         myViewHolder.sSelect_brand_item_tv.setText(cityBean.getArea_name());
