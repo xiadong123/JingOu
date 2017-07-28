@@ -35,21 +35,21 @@ android {
     }
     //多渠道打包
     productFlavors {
-//        yinyongbao{
-//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yinyongbao"]
-//        }
-//        xiaomi {
-//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
-//        }
-//        qh360 {
-//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qh360"]
-//        }
-//        baidu {
-//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
-//        }
-//        wandoujia {
-//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
-//        }
+        yinyongbao{
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yinyongbao"]
+        }
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+        }
+        qh360 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qh360"]
+        }
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+        }
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+        }
     }
 }
 

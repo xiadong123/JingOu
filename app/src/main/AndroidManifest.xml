@@ -268,10 +268,10 @@
 
         </meta-data>
 
-        <!--&lt;!&ndash;设置动态渠道变量&ndash;&gt;-->
-        <!--<meta-data-->
-            <!--android:name="UMENG_CHANNEL"-->
-            <!--android:value="${UMENG_CHANNEL_VALUE}" />-->
+        <!--设置动态渠道变量-->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
 
 
         <!-- 我的钱包 奖励详情  -Li -->
