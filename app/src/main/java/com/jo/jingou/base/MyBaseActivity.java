@@ -87,7 +87,7 @@ public abstract class MyBaseActivity extends BaseActivity implements MessageLoad
             protected <T extends MyBaseModel> void request(int code1, int code2, T model) {
                 super.request(code1, code2, model);
                 if (code1 == Constant.NETWORKERROR) {
-                    showToast("网络请求失败！");
+//                    showToast("网络请求失败！");
                 } else if (code1 == Constant.LOGININVAILD) {
 
                     dialog();

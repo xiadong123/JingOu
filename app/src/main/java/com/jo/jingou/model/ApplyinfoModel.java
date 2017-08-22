@@ -38,9 +38,11 @@ public class ApplyinfoModel extends MyBaseModel {
         private int BusinessApplyId;
         private String StoreMobile;
         private String StoreName;
-        private String StoreInviterName;
-        private String StoreInviterPhone;
-        private String StoreCode;
+
+        private String Name;
+        private String MerchantTel;
+        private String MerchantCode;
+        private String MerchantType;
         /**
          * Type : 0
          * UploadId : 8
@@ -91,28 +93,34 @@ public class ApplyinfoModel extends MyBaseModel {
 
 
         //后加入
-        public String getStoreInviterName() {
-            return StoreInviterName;
+        public String getMerchantName() {
+            return Name;
         }
 
-        public void setStoreInviterName(String StoreInviterName) {
-            this.StoreInviterName = StoreInviterName;
+        public void setMerchantName(String MerchantName) {
+            this.Name = MerchantName;
         }
 
-        public String getStoreInviterPhone() {
-            return StoreInviterPhone;
+        public String getMerchantTel() {
+            return MerchantTel;
         }
 
-        public void setStoreInviterPhone(String StoreInviterPhone) {
-            this.StoreInviterPhone = StoreInviterPhone;
+        public void setMerchantTel(String MerchantTel) {
+            this.MerchantTel = MerchantTel;
         }
 
-        public String getStoreCode() {
-            return StoreCode;
+        public String getMerchant() {
+            return MerchantCode;
         }
 
-        public void setStoreCode(String StoreCode) {
-            this.StoreCode = StoreCode;
+        public void setMerchant(String Merchant) {
+            this.MerchantCode = Merchant;
+        }
+
+        public String getMerchantType(){return MerchantType;}
+
+        public void setMerchantType(String MerchantType) {
+            this.MerchantType = MerchantType;
         }
 
 

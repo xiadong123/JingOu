@@ -48,7 +48,7 @@ public class MyApplication extends Application {
 
 
     {
-        PlatformConfig.setWeixin("wxbd3e6bba8efbae73 ", "dc7dcb58f1369ea84e16dc20d49209734824727d");
+        PlatformConfig.setWeixin("wxbd3e6bba8efbae73 ", "f82017e272b8519fcf34244222ead09c");
         PlatformConfig.setQQZone("1105888490", "xHo9RkB8RDJDJnyk");
         PlatformConfig.setSinaWeibo("1238457414", "8f9bd71d9be08a5d7e73eb77132425ae", "http://sns.whalecloud.com/sina2/callback");
         //Config.REDIRECT_URL = "";

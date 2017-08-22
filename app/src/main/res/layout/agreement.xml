@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="46dp">
+        android:layout_height="36dp">
 
         <!--<ImageView-->
             <!--android:id="@+id/fanhui"-->
@@ -36,23 +36,32 @@
         <!--android:scaleType="fitXY"/>-->
     <TextView
         android:id="@+id/agreement_tv"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:textSize="18sp"/>
 
     <TextView
         android:layout_below="@id/agreement_tv"
         android:id="@+id/agreement_tv1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"/>
+        android:layout_alignParentLeft="true"
+
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"/>
 
     <TextView
         android:layout_below="@id/agreement_tv1"
         android:id="@+id/agreement_tv2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"/>
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:textSize="10sp"/>
 </RelativeLayout>
 </LinearLayout>

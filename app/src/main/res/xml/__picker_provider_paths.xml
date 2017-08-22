@@ -2,4 +2,5 @@
 <paths>
     <external-path name="external_storage_root" path="."/>
     <files-path name="files" path="."/>
+    <root-path path="" name="download" />
 </paths>

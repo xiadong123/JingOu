@@ -1,6 +1,8 @@
 package com.jo.jingou.activity;
 
 import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
 import android.text.Spannable;
@@ -15,7 +17,6 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
@@ -40,7 +41,6 @@ import com.squareup.okhttp.Request;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,9 +78,9 @@ public class MyBusinessActivity extends MyBaseActivity {
     private String shopInvite;
     private String shopTel;
 
-    private String inviterName;
-    private String inviterPhone;
-    private String codes;
+    private String merchantName;
+    private String merchantTel;
+    private String merchant;
 
     private String shopAccount;
     private File[] myFile;
@@ -104,12 +104,20 @@ public class MyBusinessActivity extends MyBaseActivity {
     private EditText sInviter_name;
     private EditText sInviter_phone;
     private EditText sCode;
+    private TextView form1;
+    private LinearLayout pinpaishouquan, xiangguanzhengjian, shenfenyanzheng;
+    private RelativeLayout ssmerchantType;
+    private String merchantType;
 
-
+    final String[] items = new String[]{"企业", "个人", "直销"};/*设置列表的内容*/
+    private String leixing = items[1];
     @Override
     public void initData() {
         layoutId = R.layout.activity_my_business;
     }
+
+
+
 
     @Override
     public void findViews() {
@@ -132,6 +140,12 @@ public class MyBusinessActivity extends MyBaseActivity {
         sInviter_name = (EditText) findViewById(R.id.inviter_name);
         sInviter_phone = (EditText) findViewById(R.id.inviter_phone);
         sCode = (EditText) findViewById(R.id.code);
+
+        form1 = (TextView) findViewById(R.id.from1);
+        pinpaishouquan = (LinearLayout) findViewById(R.id.pinpaishouquan);
+        shenfenyanzheng = (LinearLayout) findViewById(R.id.shenfenyanzheng);
+        xiangguanzhengjian = (LinearLayout) findViewById(R.id.xiangguanzhengjian);
+        ssmerchantType = (RelativeLayout) findViewById(R.id.merchantType);
 
     }
 
@@ -492,14 +506,17 @@ public class MyBusinessActivity extends MyBaseActivity {
                         Constant.EDITAPPLY + MyApplication.getToken() + "," + MyApplication.getSoleToken() + "," +
                                 MyApplication.getUser_id(),
                         myEditPhotoNames, myEditFile,
-                        new OkHttpClientManager.Param[]{new OkHttpClientManager.Param("BusinessApplyId", businessApplyId
-                                + "")
-                                , new
-                                OkHttpClientManager.Param("Mobile", storeMobile),
-                                new OkHttpClientManager.Param("Account", alipayAccount), new OkHttpClientManager.Param
-                                ("StoreName", storeName), new OkHttpClientManager.Param
-                                ("ImgPara", mImgPara), new OkHttpClientManager.Param
-                                ("UploadId", editNetUrlStr)},
+                        new OkHttpClientManager.Param[]{
+                                new OkHttpClientManager.Param("BusinessApplyId", businessApplyId + ""),
+                                new OkHttpClientManager.Param("Mobile", storeMobile),
+                                new OkHttpClientManager.Param("Account", alipayAccount),
+                                new OkHttpClientManager.Param("StoreName", storeName),
+                                new OkHttpClientManager.Param("MerchantName", merchantName),
+                                new OkHttpClientManager.Param("MerchantTel", merchantTel),
+                                new OkHttpClientManager.Param("MerchantType", merchantType),
+                                new OkHttpClientManager.Param("Merchant", merchant),
+                                new OkHttpClientManager.Param("ImgPara", mImgPara),
+                                new OkHttpClientManager.Param("UploadId", editNetUrlStr)},
                         new OkHttpClientManager.ResultCallback<UpLoadModel>() {
                             @Override
                             public void onError(Request request, Exception e) {
@@ -514,6 +531,7 @@ public class MyBusinessActivity extends MyBaseActivity {
                                 if (model.getErrcode() == 0) {
                                     UserInfoLoader.getUserInfoModel().getModel().setApplyStatus(0);
                                     showToast("修改成功");
+
                                     finish();
                                 } else {
                                     showToast(model.getErrmsg());
@@ -521,12 +539,17 @@ public class MyBusinessActivity extends MyBaseActivity {
                             }
                         }, "cnupload");
             } else {
-                utilNetwork.getEditapplyModel(new OkHttpClientManager.Param[]{new OkHttpClientManager.Param
-                        ("BusinessApplyId", businessApplyId + ""), new OkHttpClientManager.Param("Mobile", storeMobile),
-                        new OkHttpClientManager.Param("Account", alipayAccount), new OkHttpClientManager.Param
-                        ("StoreName", storeName), new OkHttpClientManager.Param
-                        ("ImgPara", mImgPara), new OkHttpClientManager.Param
-                        ("UploadId", editNetUrlStr)});
+                utilNetwork.getEditapplyModel(new OkHttpClientManager.Param[]{
+                        new OkHttpClientManager.Param("BusinessApplyId", businessApplyId + ""),
+                        new OkHttpClientManager.Param("Mobile", storeMobile),
+                        new OkHttpClientManager.Param("Account", alipayAccount),
+                        new OkHttpClientManager.Param("StoreName", storeName),
+                        new OkHttpClientManager.Param("MerchantName", merchantName),
+                        new OkHttpClientManager.Param("MerchantTel", merchantTel),
+                        new OkHttpClientManager.Param("MerchantType", merchantType),
+                        new OkHttpClientManager.Param("Merchant", merchant),
+                        new OkHttpClientManager.Param("ImgPara", mImgPara),
+                        new OkHttpClientManager.Param("UploadId", editNetUrlStr)});
             }
         } catch (Exception e) {
             cancelLoadingDialog();
@@ -597,10 +620,15 @@ public class MyBusinessActivity extends MyBaseActivity {
                     Constant.APPLYMERCHANT + MyApplication.getToken() + "," + MyApplication.getSoleToken() + "," +
                             MyApplication.getUser_id(),
                     myPhotoNames, myFile,
-                    new OkHttpClientManager.Param[]{new OkHttpClientManager.Param("StoreName", shopName), new
-                            OkHttpClientManager.Param("Mobile", shopTel),
-                            new OkHttpClientManager.Param("Account", shopAccount), new OkHttpClientManager.Param
-                            ("ImgPara", mImgPara)},
+                    new OkHttpClientManager.Param[]{
+                            new OkHttpClientManager.Param("StoreName", shopName),
+                            new OkHttpClientManager.Param("Mobile", shopTel),
+                            new OkHttpClientManager.Param("MerchantName", merchantName),
+                            new OkHttpClientManager.Param("MerchantTel", merchantTel),
+                            new OkHttpClientManager.Param("MerchantType", merchantType),
+                            new OkHttpClientManager.Param("Merchant", merchant),
+                            new OkHttpClientManager.Param("Account", shopAccount),
+                            new OkHttpClientManager.Param("ImgPara", mImgPara)},
                     new OkHttpClientManager.ResultCallback<UpLoadModel>() {
                         @Override
                         public void onError(Request request, Exception e) {
@@ -612,7 +640,7 @@ public class MyBusinessActivity extends MyBaseActivity {
                             cancelLoadingDialog();
                             if (model.getErrcode() == 0) {
                                 UserInfoLoader.getUserInfoModel().getModel().setApplyStatus(0);
-                                showToast("申请成功");
+                                showToast("申请审核中");
                                 finish();
                             } else {
                                 showToast(model.getErrmsg());
@@ -658,6 +686,55 @@ public class MyBusinessActivity extends MyBaseActivity {
             temList.add(myListBitmap.get(i));
         }
     }
+    /**
+     * 显示列表对话框
+     *
+     * @param v
+     */
+    public void merchantType(View v) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("请选择您的身份:");
+
+
+        builder.setItems(items, new DialogInterface.OnClickListener() {/*设置列表的点击事件*/
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                switch (which){
+                    case 0:
+                        form1.setText("企业");
+                        shenfenyanzheng.setVisibility(View.VISIBLE);
+                        pinpaishouquan.setVisibility(View.VISIBLE);
+                        xiangguanzhengjian.setVisibility(View.VISIBLE);
+                        leixing = items[0];
+
+
+                        break;
+                    case 1:
+                        form1.setText("个人");
+                        shenfenyanzheng.setVisibility(View.VISIBLE);
+                        pinpaishouquan.setVisibility(View.VISIBLE);
+                        xiangguanzhengjian.setVisibility(View.VISIBLE);
+                        leixing = items[1];
+
+
+                        break;
+                    case 2:
+                        form1.setText("直销");
+                        shenfenyanzheng.setVisibility(View.VISIBLE);
+                        pinpaishouquan.setVisibility(View.GONE);
+                        xiangguanzhengjian.setVisibility(View.GONE);
+
+                        leixing = items[2];
+                        break;
+                }
+            }
+        });
+
+        builder.setCancelable(false);
+        builder.create().show();
+
+    }
 
     /**
      * 检查 用户填写的信息是否完整
@@ -670,18 +747,18 @@ public class MyBusinessActivity extends MyBaseActivity {
             showToast("请填写店铺名称");
             return false;
         }
-        inviterName = sInviter_name.getText().toString().trim();
-        if (!MyUtils.hasValue(inviterName)) {
+        merchantName = sInviter_name.getText().toString().trim();
+        if (!MyUtils.hasValue(merchantName)) {
             showToast("请填写推荐人姓名");
             return false;
         }
-        inviterPhone = sInviter_phone.getText().toString().trim();
-        if (!MyUtils.hasValue(inviterPhone)) {
+        merchantTel = sInviter_phone.getText().toString().trim();
+        if (!MyUtils.hasValue(merchantTel)) {
             showToast("请填写推荐人电话");
             return false;
         }
-        codes = sCode.getText().toString().trim();
-        if (!MyUtils.hasValue(codes)) {
+        merchant = sCode.getText().toString().trim();
+        if (!MyUtils.hasValue(merchant)) {
             showToast("请填写推荐人邀请码");
             return false;
         }
@@ -690,24 +767,28 @@ public class MyBusinessActivity extends MyBaseActivity {
             showToast("请填写联系电话");
             return false;
         }
+        merchantType = form1.getText().toString().trim();
+        if (!MyUtils.hasValue(merchantType)){
+            showToast("请选择商户类型");
+            return false;
+        }
         shopAccount = sShop_account_et.getText().toString().trim();
         if (!MyUtils.hasValue(shopAccount)) {
             showToast("请填写公司账户");
             return false;
         }
-        if (brandList == null || brandList.size() == 0) {
-            showToast("请上传品牌授权书证件照");
-            return false;
+        if (brandList == null || brandList.size() == 0 ) {
+            showToast("请上传生产许可证件照");
+            return true;
         }
-        if (identityList == null || identityList.size() < 3) {
+        if (identityList == null || identityList.size() < 3 ) {
             showToast("请上传三张身份验证证件照");
             return false;
         }
 
-
-        if (certificatesList == null || certificatesList.size() == 0) {
+        if (certificatesList == null || certificatesList.size() == 0 ) {
             showToast("请上传相关证件证件照");
-            return false;
+            return true;
         }
         return true;
     }
@@ -781,6 +862,8 @@ public class MyBusinessActivity extends MyBaseActivity {
         storeMobile = model.getStoreMobile();
         alipayAccount = model.getAlipayAccount();
         storeName = model.getStoreName();
+        merchantType = model.getMerchantType();
+
 
         for (int i = 0; i < upload.size(); i++) {
             ApplyinfoModel.ModelBean.UploadBean uploadBean = upload.get(i);
@@ -818,9 +901,11 @@ public class MyBusinessActivity extends MyBaseActivity {
         sShop_tel_et.setText(model.getStoreMobile());
         sShop_account_et.setText(model.getAlipayAccount());
 
-        sInviter_name.setText(model.getStoreInviterName());
-        sInviter_phone.setText(model.getStoreInviterPhone());
-        sCode.setText(model.getStoreCode());
+        sInviter_name.setText(model.getMerchantName());
+        sInviter_phone.setText(model.getMerchantTel());
+        sCode.setText(model.getMerchant());
+        form1.setText(model.getMerchantType());
+
 
         sShop_name_et.setEnabled(false);
         sShop_tel_et.setEnabled(false);
@@ -829,6 +914,7 @@ public class MyBusinessActivity extends MyBaseActivity {
         sInviter_name.setEnabled(false);
         sInviter_phone.setEnabled(false);
         sCode.setEnabled(false);
+        ssmerchantType.setEnabled(false);
 
         sShop_name_et.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
         sShop_tel_et.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
@@ -837,6 +923,7 @@ public class MyBusinessActivity extends MyBaseActivity {
         sInviter_name.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
         sInviter_phone.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
         sCode.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
+        ssmerchantType.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
     }
 
     @Override
@@ -856,4 +943,5 @@ public class MyBusinessActivity extends MyBaseActivity {
         }
 
     }
+
 }

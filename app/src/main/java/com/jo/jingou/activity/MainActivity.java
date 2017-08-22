@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.jo.jingou.R;
 import com.jo.jingou.base.MyBaseActivity;
@@ -22,6 +23,7 @@ import com.jo.jingou.fragment.IndustryFragment;
 import com.jo.jingou.fragment.MainFragment;
 import com.jo.jingou.fragment.MallFragment;
 import com.jo.jingou.fragment.MineFragment;
+import com.jo.jingou.model.ApkModel;
 import com.jo.jingou.model.InstationCountModel;
 import com.jo.jingou.model.ProductTypeModel;
 import com.jo.jingou.model.UserInfoModel;
@@ -29,6 +31,7 @@ import com.jo.jingou.model.loader.MessageLoader;
 import com.jo.jingou.model.loader.UserInfoLoader;
 import com.jo.jingou.utils.Constant;
 import com.jo.jingou.utils.MyUtils;
+import com.jo.jingou.utils.Util_DwonApk;
 import com.jo.jingou.utils.Util_MallFragment_Data;
 import com.umeng.socialize.UMShareAPI;
 
@@ -36,6 +39,8 @@ import java.util.List;
 
 import caesar.feng.framework.net.OkHttpClientManager;
 import caesar.feng.framework.utils.Utility;
+
+import static android.R.id.list;
 
 /**
  * Created by dfyu on 2016/11/23.
@@ -67,18 +72,19 @@ public class MainActivity extends MyBaseActivity {
     int[] mBottomViewTextColor = new int[]{R.color.textcolor0, R.color.gary5};
 
 
-    //
 
     //商城全部分类
     View mMallView_t;
     View mMallView_b;
     View mMallLinearLayout;
     GridLayout mMallGridLayout;
+    private Util_DwonApk util_dwonApk;
 
 
     @Override
     public void initData() {
         layoutId = R.layout.activity_main;
+
     }
 
     @Override
@@ -130,6 +136,11 @@ public class MainActivity extends MyBaseActivity {
 
     @Override
     public void setupViews() {
+
+        //查询APK版本
+        utilNetwork.getNewApk(null);
+
+
         application.setIsFirstUse("1");
         //提前获取商城列表数据
         Util_MallFragment_Data.getProductTypeModel();
@@ -196,7 +207,7 @@ public class MainActivity extends MyBaseActivity {
                         System.exit(0);
                     }
                 });
-               // builder.setCancelable(false);
+                // builder.setCancelable(false);
                 builder.create().show();
             }
             return true;
@@ -342,7 +353,37 @@ public class MainActivity extends MyBaseActivity {
                     MessageLoader.setMessage(message0_number, message1_number, message2_number, message3_number);
                 }
                 break;
+            case Constant.REQUEST_APK_ID:
+                if (status_code == 0){
+                    ApkModel.ListBean list = ((ApkModel) model).getList();
+                    //版本不一致 需要进行升级
+                    util_dwonApk = new Util_DwonApk(this);
+                    if (!util_dwonApk.getVersion().equals(list.getVerNum())){
+                        showDwonAlert(list.getVerNum(),list.getRemark());
+                    }else {
+//                        Toast.makeText(this, "已是最新版本", Toast.LENGTH_SHORT).show();
+                    }
+                }
+                break;
         }
+    }
+
+    /**
+     * 强制升级展示Dialog
+     */
+    private void showDwonAlert(String verNum, final String apkPath) {
+        new AlertDialog.Builder(this)
+                .setTitle("版本更新提示")
+                .setMessage("新版本"+verNum+" ，我们需要进行更新")
+                .setPositiveButton("确定升级", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        util_dwonApk.doDownLoad(apkPath);
+                    }
+                })
+                .setCancelable(false)
+                .create()
+                .show();
     }
 
 

@@ -150,6 +150,17 @@ public class OrderActivity extends MyBaseActivity {
     public <T extends MyBaseModel> void onNetworkCallBack(int status_code, int network_code, T model) {
         super.onNetworkCallBack(status_code, network_code, model);
         switch (network_code) {
+            case Constant.SETTLEMENT_ID:
+                if (status_code==0){
+                    utilNetwork.getAngelBuyModel(
+                            new OkHttpClientManager.Param[]{
+                                    new OkHttpClientManager.Param("productid", productid),
+                                    new OkHttpClientManager.Param("much", much),
+                                    new OkHttpClientManager.Param("productpara", productpara)});
+                }
+                break;
+
+
             case Constant.ANGELBUY_ID:
                 cancelLoadingDialog();
                 if (status_code == 0) {

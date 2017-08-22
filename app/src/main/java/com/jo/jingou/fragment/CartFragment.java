@@ -355,7 +355,7 @@ public class CartFragment extends MyBaseFragment {
                 productpara = MyUtils.subStringEnd(productpara, ",");
 
 
-                MyUtils.commonBUY((Activity) context, ProductId, "", productpara, "", 11);
+                MyUtils.commonBUY2((Activity) context, ProductId, "", productpara, "", 11);
 
                 break;
             case R.id.fragment_cart_del:
@@ -406,15 +406,19 @@ public class CartFragment extends MyBaseFragment {
                         new OkHttpClientManager.Param[]{
                                 new OkHttpClientManager.Param("productid", productid),
                                 new OkHttpClientManager.Param("productpara", para)});
+
             }
+
         });
         builder.setNegativeButton("点错了", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
+
             }
         });
         //builder.setCancelable(false);
         builder.create().show();
+
     }
 
     @Override
@@ -479,6 +483,7 @@ public class CartFragment extends MyBaseFragment {
                                 if ((modelEntity.getProductId() + "").equals(productids[i]) && modelEntity.getParaid
                                         ().equals(proparas[i]))
                                     modelEntities.add(modelEntity);
+
                             }
                         }
 

@@ -1,7 +1,11 @@
 package com.jo.jingou.utils;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -22,6 +26,7 @@ import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ab.util.AbFileUtil;
 import com.ab.util.AbStrUtil;
@@ -33,11 +38,19 @@ import com.jo.jingou.model.AreaModel;
 import com.jo.jingou.model.RecordPopModel;
 import com.othershe.baseadapter.ViewHolder;
 import com.othershe.baseadapter.interfaces.OnItemClickListener;
+import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
+import com.tencent.mm.opensdk.modelmsg.WXImageObject;
+import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
+import com.tencent.mm.opensdk.modelmsg.WXWebpageObject;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.umeng.socialize.ShareAction;
+import com.umeng.socialize.UMShareListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;
 import com.umeng.socialize.media.UMImage;
 import com.umeng.socialize.media.UMWeb;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.util.List;
 
@@ -49,7 +62,13 @@ import caesar.feng.framework.utils.Utility;
  */
 public class Util_PopupWindow {
 
+    private static Context context;
+    private static Activity activity;
+    private static ProgressDialog dialog;
+    public static  IWXAPI api;
 
+    private static int mTargetScene = SendMessageToWX.Req.WXSceneSession;
+    private static int mTargetSceneCricle = SendMessageToWX.Req.WXSceneTimeline;
     public static <T extends MyBaseActivity> PopupWindow setCityPopupWindow(T t, AreaModel a,
                                                                             final OnCityCallBack
                                                                                     onCityCallBack, String text) {
@@ -61,7 +80,7 @@ public class Util_PopupWindow {
 
         final SetPopModel setPopModel = Util_PopupWindow.setBasePopupWindow(t, R.layout
                 .popupwindow_city_picker, null, null);
-
+        context = t;
         View contentView = setPopModel.getContentView();
         contentView.setTag(text);
         cancel = contentView.findViewById(R.id.title_cancle);
@@ -152,7 +171,8 @@ public class Util_PopupWindow {
     //分享Pop1
     public static <T extends MyBaseActivity> PopupWindow setCommonPopupWindow_Share1(final T t, final String url, String text) {
         View wx, wxc, sina, qq, cancel;
-
+        activity = t;
+        dialog = new ProgressDialog(t);
         final SetPopModel setPopModel = Util_PopupWindow.setBasePopupWindow(t, R.layout
                 .popupwindow_share, null, null);
         View contentView = setPopModel.getContentView();
@@ -162,16 +182,36 @@ public class Util_PopupWindow {
         sina = contentView.findViewById(R.id.popupwindow_share1_sina);
         qq = contentView.findViewById(R.id.popupwindow_share1_qq);
         cancel = contentView.findViewById(R.id.popupwindow_share1_cancel);
-        final UMImage image = new UMImage(t, R.drawable.logo);
+        final UMImage image = new UMImage(t, R.drawable.ic_launcher);
         wx.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 setPopModel.getPopupWindow().dismiss();
-                new ShareAction(t).setPlatform(SHARE_MEDIA.WEIXIN)
-                        .withMedia(image)
-                        .withText("利益天下")
-                        .withText("分享邀请码")
-                        .withMedia(new UMWeb(url))
-                        .share();
+
+                api = WXAPIFactory.createWXAPI(activity, "wxbd3e6bba8efbae73");
+                api.registerApp("wxbd3e6bba8efbae73");
+
+                //初始化一个WXWebpageObject对象填写 url
+                WXWebpageObject webpage  = new WXWebpageObject();
+                webpage.webpageUrl = url;
+
+                //用WXWebpageObject对象初始化一个WXMediaMessage 对象 填写标题 描述
+                WXMediaMessage msg = new WXMediaMessage(webpage);
+
+                msg.title ="利益天下";
+                msg.description = "分享得邀请码";
+                Bitmap thumb = BitmapFactory.decodeResource(activity.getResources() , R.drawable.ic_launcher);
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                thumb.compress(Bitmap.CompressFormat.PNG, 100, baos);
+                msg.thumbData = baos.toByteArray();
+
+                //构造一个Req
+                SendMessageToWX.Req req = new SendMessageToWX.Req();
+                req.transaction = buildTransaction("webpage");
+                //段用于唯一标识符
+                req.message = msg;
+                req.scene = mTargetScene;
+
+                api.sendReq(req);
 
             }
         });
@@ -179,12 +219,32 @@ public class Util_PopupWindow {
         wxc.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 setPopModel.getPopupWindow().dismiss();
-                new ShareAction(t).setPlatform(SHARE_MEDIA.WEIXIN_CIRCLE)
-                        .withMedia(image)
-                        .withText("利益天下")
-                        .withText("分享邀请码")
-                        .withMedia(new UMWeb(url))
-                        .share();
+
+                api = WXAPIFactory.createWXAPI(activity, "wxbd3e6bba8efbae73");
+                api.registerApp("wxbd3e6bba8efbae73");
+
+                //初始化一个WXWebpageObject对象填写 url
+                WXWebpageObject webpage  = new WXWebpageObject();
+                webpage.webpageUrl = url;
+
+                //用WXWebpageObject对象初始化一个WXMediaMessage 对象 填写标题 描述
+                WXMediaMessage msg = new WXMediaMessage(webpage);
+
+                msg.title ="利益天下";
+                msg.description = "分享得邀请码";
+                Bitmap thumb = BitmapFactory.decodeResource(activity.getResources() , R.drawable.ic_launcher);
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                thumb.compress(Bitmap.CompressFormat.PNG, 100, baos);
+                msg.thumbData = baos.toByteArray();
+
+                //构造一个Req
+                SendMessageToWX.Req req = new SendMessageToWX.Req();
+                req.transaction = buildTransaction("webpage");
+                //段用于唯一标识符
+                req.message = msg;
+                req.scene = mTargetSceneCricle;
+
+                api.sendReq(req);
 
 
             }
@@ -224,6 +284,48 @@ public class Util_PopupWindow {
 
         return setPopModel.getPopupWindow();
     }
+
+    private static UMShareListener shareListener = new UMShareListener() {
+        /**
+         * @descrption 分享开始的回调
+         * @param platform 平台类型
+         */
+        @Override
+        public void onStart(SHARE_MEDIA platform) {
+
+            System.out.println("platform = " + platform.toString());
+        }
+
+        /**
+         * @descrption 分享成功的回调
+         * @param platform 平台类型
+         */
+        @Override
+        public void onResult(SHARE_MEDIA platform) {
+            Toast.makeText(context, "成功了", Toast.LENGTH_LONG).show();
+        }
+
+        /**
+         * @descrption 分享失败的回调
+         * @param platform 平台类型
+         * @param t 错误原因
+         */
+        @Override
+        public void onError(SHARE_MEDIA platform, Throwable tt) {
+            Toast.makeText(context, "失败" + tt.getMessage(), Toast.LENGTH_LONG).show();
+        }
+
+        /**
+         * @descrption 分享取消的回调
+         * @param platform 平台类型
+         */
+        @Override
+        public void onCancel(SHARE_MEDIA platform) {
+
+            Toast.makeText(context, "取消了", Toast.LENGTH_LONG).show();
+
+        }
+    };
 
 
     static File PHOTO_DIR = null;
@@ -967,6 +1069,27 @@ public class Util_PopupWindow {
 
     public interface OnDateCallBack {
         public void onDateCallBack(String date);
+    }
+    private static String buildTransaction(final String type) {
+        return (type == null) ? String.valueOf(System.currentTimeMillis()) : type + System.currentTimeMillis();
+    }
+
+    /**
+     * @param isShareFriend true 分享到朋友，false分享到朋友圈
+     */
+    private static void share2Wx(boolean isShareFriend) {
+        Bitmap bitmap = BitmapFactory.decodeResource(activity.getResources(), R.mipmap.ic_launcher);
+        WXImageObject imgObj = new WXImageObject(bitmap);
+
+        WXMediaMessage msg = new WXMediaMessage();
+        msg.mediaObject = imgObj;
+        bitmap.recycle();
+
+        SendMessageToWX.Req req = new SendMessageToWX.Req();
+        req.transaction = buildTransaction("img");
+        req.message = msg;
+        req.scene = isShareFriend ? SendMessageToWX.Req.WXSceneSession : SendMessageToWX.Req.WXSceneTimeline;
+        api.sendReq(req);
     }
 
 

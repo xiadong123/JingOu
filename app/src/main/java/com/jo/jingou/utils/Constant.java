@@ -32,15 +32,15 @@ public final class Constant {
 
     //服务器地址
     //静欧公司正式网址
-    public final static String SERVER_HOST = "http://www.lytx999.com";
+//    public final static String SERVER_HOST = "http://www.lytx8888.com";
 
     //原外包测试网址
     //public final static String SERVER_HOST = "http://jingou.idea-source.net";
     //public final static String SERVER_HOST = "http://woerde.idea-source.net";
     //public final static String SERVER_HOST = "http://192.168.0.66:8037";
 
-    //阿里云网址
-//    public final static String SERVER_HOST = "http://120.27.240.229:8022";
+    //阿里云网址13816910087
+    public final static String SERVER_HOST = "http://120.27.240.229:8022";
 
     //获取请求接口权限token
     public final static int TOKEN_ID = 1001;
@@ -336,10 +336,13 @@ public final class Constant {
     public final static String RETURNDETAIL = SERVER_HOST + "/api/app/product/returndetail?token=";
 
 
+    //apk 查询 /api/app/Home/GetVersion?token
+    public static final int REQUEST_APK_ID=1045;
+    public static final String REQUEST_APK=SERVER_HOST+"/api/app/home/GetVersion?token=";
+
     //测试支付接口 /api/app/participation/AddCeshiAlipay
     public final static int ADDCESHIALIPAY_ID = 2000;
-    public final static String ADDCESHIALIPAY = SERVER_HOST +
-            "/api/app/participation/WeiXinPay?token=";
+    public final static String ADDCESHIALIPAY = SERVER_HOST + "/api/app/participation/WeiXinPay?token=";
 
 
 }

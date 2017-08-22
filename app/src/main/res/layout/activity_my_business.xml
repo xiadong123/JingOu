@@ -47,9 +47,12 @@
                         android:id="@+id/tv1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:text="您的店铺名称 "
-                        android:textColor="@color/gary5"/>
+                        android:text="您的店铺名称 : "
+                        android:textColor="@color/gary5"
+                        android:layout_alignBaseline="@+id/shop_name_et"
+                        android:layout_alignBottom="@+id/shop_name_et"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
 
                     <EditText
                         android:id="@+id/shop_name_et"
@@ -64,6 +67,14 @@
                         android:textColorHint="@color/gary3_1"
                         android:textSize="14sp"/>
                 </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/gary2">
+
+                </View>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2px"
@@ -82,7 +93,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="邀请人的姓名"
+                        android:text="邀请人的姓名 :"
                         android:textColor="@color/gary5"/>
 
                     <EditText
@@ -116,7 +127,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="邀请人的电话"
+                        android:text="邀请人的电话 :"
                         android:textColor="@color/gary5"/>
 
                     <EditText
@@ -151,7 +162,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="邀请人邀请码"
+                        android:text="邀请人邀请码 :"
                         android:textColor="@color/gary5"/>
 
                     <EditText
@@ -186,7 +197,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="您的联系电话 "
+                        android:text="您的联系电话 :"
                         android:textColor="@color/gary5"/>
 
                     <EditText
@@ -204,6 +215,59 @@
                         android:textColorHint="@color/gary3_1"
                         android:textSize="14sp"/>
                 </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/gary2">
+
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@color/white"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    >
+                    <RelativeLayout
+                        android:id="@+id/rl000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/form"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="您的商家类型 :"
+                            android:textColor="@color/gary5"/>
+                    </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/merchantType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:gravity="center"
+                    android:onClick="merchantType"
+                    android:layout_toRightOf="@+id/rl000">
+                    <TextView
+                        android:id="@+id/from1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text="@string/leixing"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:textColor="@color/gary5"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/seemore_all"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+                </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -218,7 +282,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:text="您的公司账户 "
+                        android:text="您的公司账户 : "
                         android:textColor="@color/gary5"/>
 
                     <EditText
@@ -237,19 +301,21 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/pinpaishouquan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:background="@color/white"
                     android:orientation="vertical"
                     android:paddingLeft="12dp"
-                    android:paddingRight="12dp">
+                    android:paddingRight="12dp"
+                    android:visibility="visible">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="14dp"
-                        android:text="品牌授权书"
+                        android:text="生产许可证、品牌授权书"
                         android:textColor="@color/gary5"
                         android:textSize="14sp"/>
 
@@ -275,17 +341,21 @@
                         app:is_show_del="true"
                         app:max_num="9"
                         app:one_line_show_num="4"
-                        app:pic_size="86dp"></com.jo.jingou.view.imageshowpickerview.ImageShowPickerView>
+                        app:pic_size="86dp">
+
+                    </com.jo.jingou.view.imageshowpickerview.ImageShowPickerView>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/shenfenyanzheng"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:background="@color/white"
                     android:orientation="vertical"
                     android:paddingLeft="12dp"
-                    android:paddingRight="12dp">
+                    android:paddingRight="12dp"
+                    android:visibility="visible">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -324,17 +394,21 @@
                         app:is_show_del="true"
                         app:max_num="3"
                         app:one_line_show_num="4"
-                        app:pic_size="86dp"></com.jo.jingou.view.imageshowpickerview.ImageShowPickerView>
+                        app:pic_size="86dp">
+
+                    </com.jo.jingou.view.imageshowpickerview.ImageShowPickerView>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/xiangguanzhengjian"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:background="@color/white"
                     android:orientation="vertical"
                     android:paddingLeft="12dp"
-                    android:paddingRight="12dp">
+                    android:paddingRight="12dp"
+                    android:visibility="visible">
 
                     <TextView
                         android:layout_width="wrap_content"

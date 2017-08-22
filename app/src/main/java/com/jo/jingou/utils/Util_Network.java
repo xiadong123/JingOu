@@ -8,6 +8,7 @@ import com.jo.jingou.model.AddressModel;
 import com.jo.jingou.model.AliPayModel;
 import com.jo.jingou.model.AngelBuyModel;
 import com.jo.jingou.model.AngelModel;
+import com.jo.jingou.model.ApkModel;
 import com.jo.jingou.model.ApplyinfoModel;
 import com.jo.jingou.model.BanrndModel;
 import com.jo.jingou.model.CardListModel;
@@ -1139,7 +1140,24 @@ public class Util_Network {
                     }
                 });
     }
+    //获取APK 信息
+    public void getNewApk(final OkHttpClientManager.Param[] params){
+        OkHttpClientManager.postAsyn(Constant.REQUEST_APK
+                        +MyApplication.getToken()
+                        + "," + MyApplication.getSoleToken()
+                        + "," + MyApplication.getUser_id(),
+                new OkHttpClientManager.Param[]{},
+                new OkHttpClientManager.ResultCallback<ApkModel>() {
+                    public void onError(Request request, Exception e) {
+                        request(Constant.NETWORKERROR, Constant.REQUEST_APK_ID, null);
+                    }
 
+                    @Override
+                    public void onResponse(ApkModel o) {
+                        onNetWorkCallBack(o, Constant.REQUEST_APK_ID,params);
+                    }
+                });
+    }
 
     protected void onNetWorkCallBack(MyBaseModel o, final int netWork_Id, final OkHttpClientManager.Param[] params) {
         switch (o.getErrcode()) {

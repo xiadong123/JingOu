@@ -12,4 +12,10 @@
     <item name="tag_6" type="id"></item>
 
 
+    <string name="shangjia">商家</string>
+    <string name="zhixiao">直销</string>
+    <string name="geren">个人</string>
+    <string name="leixing">类型</string>
+
+
 </resources>

@@ -8,7 +8,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 5
-        versionName '5.4.2'
+        versionName '2.2.4'
     }
 //    defaultConfig {
 //        // Stops the Gradle plugin's automatic rasterization of vectors
@@ -34,23 +34,23 @@ android {
         additionalParameters "--no-version-vectors"
     }
     //多渠道打包
-    productFlavors {
-        yinyongbao{
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yinyongbao"]
-        }
-        xiaomi {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
-        }
-        qh360 {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qh360"]
-        }
-        baidu {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
-        }
-        wandoujia {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
-        }
-    }
+//    productFlavors {
+//        yinyongbao{
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yinyongbao"]
+//        }
+//        xiaomi {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+//        }
+//        qh360 {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qh360"]
+//        }
+//        baidu {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+//        }
+//        wandoujia {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+//        }
+//    }
 }
 
 dependencies {
@@ -74,6 +74,4 @@ dependencies {
     compile files('libs/umeng_social_net.jar')
     compile files('libs/umeng_social_tool.jar')
     compile files('libs/andbase.jar')
-
-
 }

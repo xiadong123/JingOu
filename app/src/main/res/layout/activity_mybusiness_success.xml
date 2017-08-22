@@ -95,7 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="http://lytx999.com/admin/system/login"
+                android:text="http://lytx8888.com/admin/system/login"
                 android:textColor="@color/text_blue_00"
                 android:textSize="14dp" />
         </LinearLayout>

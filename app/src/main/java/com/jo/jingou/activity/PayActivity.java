@@ -84,7 +84,7 @@ public class PayActivity extends MyBaseActivity {
                         break;
                     case "6002":
                         // 取消订单
-                        Toast.makeText(PayActivity.this, "网络连接出错", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(PayActivity.this, "网络连接出错", Toast.LENGTH_SHORT).show();
                         startToPayCallBackActivity(false);
                         break;
                     default:
@@ -172,11 +172,14 @@ public class PayActivity extends MyBaseActivity {
                     final IWXAPI msgApi = WXAPIFactory.createWXAPI(PayActivity.this, null);
                     // 将该app注册到微信
                     msgApi.registerApp("wxbd3e6bba8efbae73");
+
+
                 }
 
-                showLoadingDialog();
-                utilNetwork.getAddCeshiAlipayModel(new OkHttpClientManager.Param[]{new OkHttpClientManager.Param("out_trade_no", ordernum)});
+                showLoadingDialog("正在生成订单...", false);
+                utilNetwork.getAddCeshiAlipayModel(new OkHttpClientManager.Param[]{new OkHttpClientManager.Param("OutTradeNo", ordernum)});
                 break;
+
         }
     }
 
